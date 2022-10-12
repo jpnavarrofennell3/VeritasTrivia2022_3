@@ -42,7 +42,10 @@ namespace TriviaVeritas
                 }
             }
         }
-
+         
+        /// <summary>
+        /// Esta funcion muestra la portada de trivia
+        /// </summary>
         static public void MostrarPortada()
         {
             Console.Clear();
