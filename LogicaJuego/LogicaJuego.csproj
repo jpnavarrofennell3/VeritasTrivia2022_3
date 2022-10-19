@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ClasesDeObjetos\ClasesDeObjetos.csproj" />
+  </ItemGroup>
+
 </Project>
