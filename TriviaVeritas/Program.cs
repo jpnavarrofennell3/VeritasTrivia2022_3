@@ -59,6 +59,7 @@ namespace TriviaVeritas
         static public void MostrarCreditos()
         {
             Console.WriteLine("Creador por Juan Navarro.");
+            Console.WriteLine("Estudiante: André Rodríguez Artavia");
             Console.WriteLine("Arte ASCII por ascii-art-generator.org.");
             Console.ReadLine();
         }
