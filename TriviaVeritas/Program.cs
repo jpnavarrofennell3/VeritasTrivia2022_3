@@ -52,6 +52,10 @@ namespace TriviaVeritas
             Console.WriteLine("__ __|   _)       _)       \r\n   |  __| |\\ \\   / |  _` | \r\n   | |    | \\ \\ /  | (   | \r\n  _|_|   _|  \\_/  _|\\__,_| \r\n                           \r\n\\ \\     /        _) |              \r\n \\ \\   / _ \\  __| | __|  _` |  __| \r\n  \\ \\ /  __/ |    | |   (   |\\__ \\ \r\n   \\_/ \\___|_|   _|\\__|\\__,_|____/ ");
         }
 
+        /// <summary>
+        /// Esta función mustra los créditos de la trivia
+        /// </summary>
+
         static public void MostrarCreditos()
         {
             Console.WriteLine("Creador por Juan Navarro.");
