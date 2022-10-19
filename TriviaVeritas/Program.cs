@@ -59,7 +59,7 @@ namespace TriviaVeritas
         static public void MostrarCreditos()
         {
             Console.WriteLine("Creador por Juan Navarro.");
-            Console.WriteLine("Arte ASCII por ascii-art-generator.org.");
+            Console.WriteLine("Estudiante: Bernardo Hidalgo Castro");
             Console.ReadLine();
         }
 
