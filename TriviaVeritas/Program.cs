@@ -63,6 +63,9 @@ namespace TriviaVeritas
             Console.ReadLine();
         }
 
+        /// <summary>
+        /// Función que arranca el juego de Trivia
+        /// </summary>
         static public void IniciarJuego()
         {
             //Console.Clear();
