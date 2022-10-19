@@ -60,10 +60,14 @@ namespace TriviaVeritas
         {
             Console.WriteLine("Creador por Juan Navarro.");
             Console.WriteLine("Estudiante: Jose Vargas");
+            Console.WriteLine("Estudiante: Bernardo Hidalgo Castro");
             Console.WriteLine("Arte ASCII por ascii-art-generator.org.");
             Console.ReadLine();
         }
 
+        /// <summary>
+        /// Función que arranca el juego de Trivia
+        /// </summary>
         static public void IniciarJuego()
         {
             //Console.Clear();
