@@ -8,8 +8,8 @@ namespace ClasesDeObjetos
 {
     public class Dificultad
     {
-        string nombreDeLaDificultad;
-        Pregunta[] preguntas;
+         public string nombreDeLaDificultad;
+         public Pregunta[] preguntas;
         
     }
 }
