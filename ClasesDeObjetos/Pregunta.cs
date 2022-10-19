@@ -8,8 +8,8 @@ namespace ClasesDeObjetos
 {
     public class Pregunta
     {
-        string enunciadoDeLaPregunta;
-        Respuesta[] respuestasDeLaPregunta;
-        int respuestaCorrecta;
+        public string enunciadoDeLaPregunta;
+        public Respuesta[] respuestasDeLaPregunta;
+        public int respuestaCorrecta;
     }
 }
