@@ -67,7 +67,11 @@ namespace TriviaVeritas
         {
             //Console.Clear();
         }
-
+        
+        /// <summary>
+        /// Esta funcion transforma texto en numeros, si sucede un error regresa un -1
+        /// </summary>
+        /// <returns></returns>
         static public int CapturarNumero()
         {
             try
