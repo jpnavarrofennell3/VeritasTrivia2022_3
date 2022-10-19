@@ -10,5 +10,9 @@ namespace ClasesDeObjetos
     {
         public string EnunciadoDeLaRespuesta;
 
+        public Respuesta()
+        {
+
+        }
     }
 }

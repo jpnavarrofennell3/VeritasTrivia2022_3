@@ -11,5 +11,10 @@ namespace ClasesDeObjetos
         public string enunciadoDeLaPregunta;
         public Respuesta[] respuestasDeLaPregunta;
         public int respuestaCorrecta;
+
+        public Pregunta()
+        {
+            respuestasDeLaPregunta = new Respuesta[4];
+        }
     }
 }

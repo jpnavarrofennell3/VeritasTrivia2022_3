@@ -3,11 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ClasesDeObjetos;
 
 namespace LogicaJuego
 {
     public class Juego
     {
+        Dificultad[] bancoDePreguntas;
+
+        public Juego()
+        {
+            bancoDePreguntas = new Dificultad[5];
+        }
+
+
+
 
         public void IniciarJuego() 
         { }

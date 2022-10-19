@@ -10,6 +10,12 @@ namespace ClasesDeObjetos
     {
          public string nombreDeLaDificultad;
          public Pregunta[] preguntas;
+
+        public Dificultad()
+        {
+            preguntas = new Pregunta[5];
+        }
         
+
     }
 }
