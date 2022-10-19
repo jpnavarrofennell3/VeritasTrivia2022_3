@@ -1,7 +1,4 @@
-﻿using System;
-using ClasesDeObjetos;
-
-namespace TriviaVeritas
+﻿namespace TriviaVeritas
 {
     internal class Program
     {
@@ -59,7 +56,8 @@ namespace TriviaVeritas
         static public void MostrarCreditos()
         {
             Console.WriteLine("Creador por Juan Navarro.");
-            Console.WriteLine("Estudiante: Bernardo Hidalgo Castro");
+            Console.WriteLine("Arte ASCII por ascii-art-generator.org.");
+            Console.WriteLine("Estudiante: Kevin Villalobos Rodríguez");
             Console.ReadLine();
         }
 
