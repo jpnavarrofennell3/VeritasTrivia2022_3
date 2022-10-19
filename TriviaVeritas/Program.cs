@@ -81,7 +81,10 @@ namespace TriviaVeritas
             }
         }
 
-        static public void MostrarOpciones()
+        /// <summary>
+        /// Imprime en la pantalla las opciones que el usuario tiene. 
+        /// </summary>
+        static public void MostrarOpciones() 
         {
             Console.WriteLine("1 - Iniciar Juego");
             Console.WriteLine("2 - Creditos");
