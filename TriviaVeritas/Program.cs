@@ -1,4 +1,7 @@
-﻿using LogicaJuego;
+
+
+using LogicaJuego
+
 
 namespace TriviaVeritas
 {
@@ -75,6 +78,7 @@ namespace TriviaVeritas
         /// </summary>
         static public void IniciarJuego()
         {
+
             Juego juegoActual = new Juego();
         }
         

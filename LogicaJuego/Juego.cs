@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -39,11 +39,13 @@ namespace LogicaJuego
         // actual
         public string ObtenerPregunta()
         {
+
             return bancoDePreguntas[nivelDeDificultad].preguntas[numeroDePregunta].enunciadoDeLaPregunta;
         }
 
         // Método que responde la pregunta actual en la dificultad actual.
         // Recibe un un valor que guarda en respuestaDelUsuario
+
         public void ReponderPregunta(int parametro)
         {
             respuestaDelUsuario = parametro;
@@ -56,12 +58,13 @@ namespace LogicaJuego
         {
             if ( respuestaDelUsuario ==  bancoDePreguntas[nivelDeDificultad].preguntas[numeroDePregunta].respuestaCorrecta )
 
+
                 return true;
             else
                 return false;
 
-        }
 
+        }
 
         // Método que me da la respuesta de la pregunta actual en la dificultad actual
         public void ObtenerRespuestasPosibles()
