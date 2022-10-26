@@ -63,19 +63,8 @@ namespace LogicaJuego
         }
 
 
-
-
-
-
-        // Método que se ejecuta al perder el juego
-        public void PerderJuego()
-        { }
-
         // Método que me da la respuesta de la pregunta actual en la dificultad actual
         public void ObtenerRespuestasPosibles()
-        { }
-
-        public void FinJuego()
         { }
 
         public void CargarDatos()
