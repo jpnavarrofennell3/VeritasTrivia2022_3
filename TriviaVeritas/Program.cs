@@ -1,4 +1,6 @@
-﻿namespace TriviaVeritas
+﻿using LogicaJuego
+
+namespace TriviaVeritas
 {
     internal class Program
     {
@@ -74,6 +76,7 @@
         static public void IniciarJuego()
         {
             //Console.Clear();
+            Juego juego = new Juego();
         }
         
         /// <summary>

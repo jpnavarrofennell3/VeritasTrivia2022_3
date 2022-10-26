@@ -14,6 +14,7 @@ namespace LogicaJuego
         int nivelDeDificultad;
         int numeroDePregunta;
         Random generadorDeNumerosAleatorios;
+        int respuestaDelUsuario;
 
         // Método constructor
         public Juego()
@@ -39,25 +40,43 @@ namespace LogicaJuego
 
         // Método que me entrega una pregunta del banco de pregunta en la dificultada
         // actual
-        public void ObtenerPregunta()
-        { }
+        public string ObtenerPregunta()
+        {
+            return 
+            bancoDePreguntas[nivelDeDificultad].preguntas[numeroDePregunta].enunciadoDeLaPregunta;
+        }
 
         // Método que responde la pregunta actual en la dificultad actual.
-        public void ReponderPregunta()
+        // Recibe un valor que guarda en respuestaDelUsuario
+        public void ReponderPregunta(int parametro)
         {
-
+            respuestaDelUsuario = parametro;
         }
 
         // Método que me da la respuesta de la pregunta actual en la dificultad actual
         public void ObtenerRespuesta()
         { }
 
-        public void EvaluarRespuesta()
-        { }
+        //Mètodo que me indica si el jugador acerto o falla la pregunta.
+        //Si acertó el método devuelve true
+        //Caso contrario devuelve flase
+        public bool EvaluarRespuesta()
+        {
+            if(respuestaDelUsuario == bancoDePreguntas[nivelDeDificultad].preguntas[numeroDePregunta].respuestaCorrecta)
+            {
+                return true;
+
+            }
+            else
+            {
+                return false;
+            }
+        }
 
         public void ProgresarJuego()
         {
             nivelDeDificultad += 1; // nivelDeDificultad = nivelDeDificultad + 1;
+            numeroDePregunta = generadorDeNumerosAleatorios.Next(0, 5);
         }
 
         public void FinJuego()
