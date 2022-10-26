@@ -76,7 +76,7 @@ namespace TriviaVeritas
         static public void IniciarJuego()
         {
             //Console.Clear();
-            Juego juego = new Juego();
+            Juego juegoActual = new Juego();
         }
         
         /// <summary>
