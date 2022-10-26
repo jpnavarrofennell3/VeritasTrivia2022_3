@@ -48,19 +48,19 @@ namespace LogicaJuego
             // Nivel muy fácil
             bancoDePreguntas[0].nombreDeLaDificultad = "Muy Fácil";
 
-            bancoDePreguntas[0].preguntas[0].enunciadoDeLaPregunta = "¿Dónde se ubica Costa Rica?";
+            bancoDePreguntas[0].preguntas[0].enunciadoDeLaPregunta = "¿Cuál es el primer planeta del sistema solar?";
             bancoDePreguntas[0].preguntas[0].respuestaCorrecta = 1;
-            bancoDePreguntas[0].preguntas[0].respuestasDeLaPregunta[0].EnunciadoDeLaRespuesta = "Asia";
-            bancoDePreguntas[0].preguntas[0].respuestasDeLaPregunta[1].EnunciadoDeLaRespuesta = "America";
-            bancoDePreguntas[0].preguntas[0].respuestasDeLaPregunta[2].EnunciadoDeLaRespuesta = "Europa";
-            bancoDePreguntas[0].preguntas[0].respuestasDeLaPregunta[3].EnunciadoDeLaRespuesta = "Oceanía";
+            bancoDePreguntas[0].preguntas[0].respuestasDeLaPregunta[0].EnunciadoDeLaRespuesta = "Venus";
+            bancoDePreguntas[0].preguntas[0].respuestasDeLaPregunta[1].EnunciadoDeLaRespuesta = "Mercurio";
+            bancoDePreguntas[0].preguntas[0].respuestasDeLaPregunta[2].EnunciadoDeLaRespuesta = "Tierra";
+            bancoDePreguntas[0].preguntas[0].respuestasDeLaPregunta[3].EnunciadoDeLaRespuesta = "Marte";
 
-            bancoDePreguntas[0].preguntas[1].enunciadoDeLaPregunta = "¿Dónde se ubica Japón?";
-            bancoDePreguntas[0].preguntas[1].respuestaCorrecta = 3;
-            bancoDePreguntas[0].preguntas[1].respuestasDeLaPregunta[0].EnunciadoDeLaRespuesta = "Asia";
-            bancoDePreguntas[0].preguntas[1].respuestasDeLaPregunta[1].EnunciadoDeLaRespuesta = "America";
-            bancoDePreguntas[0].preguntas[1].respuestasDeLaPregunta[2].EnunciadoDeLaRespuesta = "Europa";
-            bancoDePreguntas[0].preguntas[1].respuestasDeLaPregunta[3].EnunciadoDeLaRespuesta = "Oceanía";
+            bancoDePreguntas[0].preguntas[1].enunciadoDeLaPregunta = "¿Cuál es el satélite que rodea la tierra?";
+            bancoDePreguntas[0].preguntas[1].respuestaCorrecta = 2;
+            bancoDePreguntas[0].preguntas[1].respuestasDeLaPregunta[0].EnunciadoDeLaRespuesta = "Phobos";
+            bancoDePreguntas[0].preguntas[1].respuestasDeLaPregunta[1].EnunciadoDeLaRespuesta = "Titán";
+            bancoDePreguntas[0].preguntas[1].respuestasDeLaPregunta[2].EnunciadoDeLaRespuesta = "Luna";
+            bancoDePreguntas[0].preguntas[1].respuestasDeLaPregunta[3].EnunciadoDeLaRespuesta = "Europa";
 
             bancoDePreguntas[0].preguntas[2].enunciadoDeLaPregunta = "";
             bancoDePreguntas[0].preguntas[3].enunciadoDeLaPregunta = "";
