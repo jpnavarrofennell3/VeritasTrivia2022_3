@@ -42,6 +42,9 @@ namespace LogicaJuego
 
         public void CargarDatos()
         {
+            //Esta funcion funciona como FileExplorer de Windows. 
+            //Por ejemplo: bancoDePreguntas 0/Pregunta 0/enunciadoDeLaPregunta/ 'Pregunta'.
+
             // Nivel muy fácil
             bancoDePreguntas[0].nombreDeLaDificultad = "Muy Fácil";
 
