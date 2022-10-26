@@ -66,6 +66,7 @@
             Console.WriteLine("Estudiante: Ariana Díaz Luna");
             Console.WriteLine("Arte ASCII por ascii-art-generator.org.");
             Console.ReadLine(); 
+
         }
 
         /// <summary>
