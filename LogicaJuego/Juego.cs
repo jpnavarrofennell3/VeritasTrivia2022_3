@@ -76,8 +76,6 @@ namespace LogicaJuego
             bancoDePreguntas[0].nombreDeLaDificultad = "Muy Fácil";
 
             
-
-
         }
     }
 }

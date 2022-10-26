@@ -58,13 +58,12 @@ namespace TriviaVeritas
         static public void MostrarCreditos()
         {
 
-            Console.WriteLine("Creado por Juan Navarro (Rama jpnavarro).");
-            Console.WriteLine("Estudiante: André Rodríguez Artavia (Rama André)");
+            Console.WriteLine("Creado por Juan Navarro.");
+            Console.WriteLine("Estudiante: André Rodríguez Artavia ");
             Console.WriteLine("Estudiante: Jose Vargas");
             Console.WriteLine("Estudiante: Bernardo Hidalgo Castro");
-            Console.WriteLine("Estudiante: Kevin Villalobos Rodríguez Rama Okrin");
-            Console.WriteLine("Rama editada por Bernardo Hidalgo Castro."); 
-            Console.WriteLine("Estudiante: Mario Venegas Venegas");
+            Console.WriteLine("Estudiante: Kevin Villalobos Rodríguez");
+            Console.WriteLine("Estudiante: Mario Venegas Venegas(Rama Principal)");
             Console.WriteLine("Estudiante: Ariana Díaz Luna");
             Console.WriteLine("Arte ASCII por ascii-art-generator.org.");
             Console.ReadLine(); 
