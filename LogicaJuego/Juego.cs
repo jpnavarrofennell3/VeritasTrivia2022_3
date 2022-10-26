@@ -62,10 +62,21 @@ namespace LogicaJuego
             bancoDePreguntas[0].preguntas[1].respuestasDeLaPregunta[2].EnunciadoDeLaRespuesta = "Luna";
             bancoDePreguntas[0].preguntas[1].respuestasDeLaPregunta[3].EnunciadoDeLaRespuesta = "Europa";
 
-            bancoDePreguntas[0].preguntas[2].enunciadoDeLaPregunta = "";
-            bancoDePreguntas[0].preguntas[3].enunciadoDeLaPregunta = "";
-            bancoDePreguntas[0].preguntas[4].enunciadoDeLaPregunta = "";
+            bancoDePreguntas[0].preguntas[2].enunciadoDeLaPregunta = "¿Cuántos planetas hay en el Sistema Solar?";
+            bancoDePreguntas[0].preguntas[2].respuestaCorrecta = 0;
+            bancoDePreguntas[0].preguntas[2].respuestasDeLaPregunta[0].EnunciadoDeLaRespuesta = "8";
+            bancoDePreguntas[0].preguntas[2].respuestasDeLaPregunta[1].EnunciadoDeLaRespuesta = "9";
+            bancoDePreguntas[0].preguntas[2].respuestasDeLaPregunta[2].EnunciadoDeLaRespuesta = "7";
+            bancoDePreguntas[0].preguntas[2].respuestasDeLaPregunta[3].EnunciadoDeLaRespuesta = "10";
 
+            bancoDePreguntas[0].preguntas[3].enunciadoDeLaPregunta = "¿Cuál es el planeta más grande del Sistema Solar?";
+            bancoDePreguntas[0].preguntas[3].respuestaCorrecta = 3;
+            bancoDePreguntas[0].preguntas[3].respuestasDeLaPregunta[0].EnunciadoDeLaRespuesta = "Saturno";
+            bancoDePreguntas[0].preguntas[3].respuestasDeLaPregunta[1].EnunciadoDeLaRespuesta = "Urano";
+            bancoDePreguntas[0].preguntas[3].respuestasDeLaPregunta[2].EnunciadoDeLaRespuesta = "Neptuno";
+            bancoDePreguntas[0].preguntas[3].respuestasDeLaPregunta[3].EnunciadoDeLaRespuesta = "Júpiter";
+
+          
             bancoDePreguntas[1].nombreDeLaDificultad = "Fácil";
             bancoDePreguntas[2].nombreDeLaDificultad = "Normal";
             bancoDePreguntas[3].nombreDeLaDificultad = "Difícil";
