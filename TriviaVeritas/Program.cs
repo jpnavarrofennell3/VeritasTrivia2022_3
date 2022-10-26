@@ -55,11 +55,10 @@
 
         static public void MostrarCreditos()
         {
-
+            Console.WriteLine("Rama editada por Bernardo Hidalgo Castro.");
             Console.WriteLine("Creado por Juan Navarro.");
             Console.WriteLine("Estudiante: André Rodríguez Artavia");
             Console.WriteLine("Estudiante: Jose Vargas");
-            Console.WriteLine("Estudiante: Bernardo Hidalgo Castro");
             Console.WriteLine("Estudiante: Kevin Villalobos Rodríguez");
             Console.WriteLine("Estudiante: Mario Venegas Venegas");
             Console.WriteLine("Estudiante: Ariana Díaz Luna");
