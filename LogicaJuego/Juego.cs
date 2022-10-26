@@ -9,25 +9,46 @@ namespace LogicaJuego
 {
     public class Juego
     {
+        // propiedades ó variables
         Dificultad[] bancoDePreguntas;
+        int nivelDeDificultad;
+        int numeroDePregunta;
+        Random generadorDeNumerosAleatorios;
 
+        // Método constructor
         public Juego()
         {
             bancoDePreguntas = new Dificultad[5];
+            CargarDatos();
+            nivelDeDificultad = 0;
+            // creo el objeto que me da números aleatorios.
+            generadorDeNumerosAleatorios = new Random();
+            // según el manual, me entrega un numero int del 1 al 5 sin incluir el 5.
+            numeroDePregunta = generadorDeNumerosAleatorios.Next(0, 5);
         }
 
 
 
-
+        // Método que inicia el juego
         public void IniciarJuego() 
         { }
 
+        // Método que se ejecuta al perder el juego
         public void PerderJuego()
         { }
 
+        // Método que me entrega una pregunta del banco de pregunta en la dificultada
+        // actual
         public void ObtenerPregunta()
         { }
 
+        // Método que responde la pregunta actual en la dificultad actual.
+        public void ReponderPregunta()
+        {
+
+        }
+
+        // Método que me da la respuesta de la pregunta actual en la dificultad actual
         public void ObtenerRespuesta()
         { }
 
@@ -35,7 +56,9 @@ namespace LogicaJuego
         { }
 
         public void ProgresarJuego()
-        { }
+        {
+            nivelDeDificultad += 1; // nivelDeDificultad = nivelDeDificultad + 1;
+        }
 
         public void FinJuego()
         { }
@@ -156,6 +179,7 @@ namespace LogicaJuego
             bancoDePreguntas[2].preguntas[4].respuestasDeLaPregunta[1].EnunciadoDeLaRespuesta = "Worlds Edge";
             bancoDePreguntas[2].preguntas[4].respuestasDeLaPregunta[2].EnunciadoDeLaRespuesta = "Olympus";
             bancoDePreguntas[2].preguntas[4].respuestasDeLaPregunta[3].EnunciadoDeLaRespuesta = "New Moon";
+
         }
     }
 }
