@@ -55,10 +55,6 @@ namespace LogicaJuego
             bancoDePreguntas[0].preguntas[0].respuestasDeLaPregunta[2].EnunciadoDeLaRespuesta = "Koala";
             bancoDePreguntas[0].preguntas[0].respuestasDeLaPregunta[3].EnunciadoDeLaRespuesta = "Surulandia";
 
-
-
-
-
             bancoDePreguntas[0].preguntas[0].enunciadoDeLaPregunta = "¿A qué ciudad se refiere la frase “todos los caminos llevan a Roma”?";
             bancoDePreguntas[0].preguntas[0].respuestaCorrecta = 2;
             bancoDePreguntas[0].preguntas[0].respuestasDeLaPregunta[0].EnunciadoDeLaRespuesta = "Los Angeles";
@@ -80,11 +76,6 @@ namespace LogicaJuego
             bancoDePreguntas[0].preguntas[0].respuestasDeLaPregunta[2].EnunciadoDeLaRespuesta = "New York";
             bancoDePreguntas[0].preguntas[0].respuestasDeLaPregunta[3].EnunciadoDeLaRespuesta = "Carambola";
 
-
-
-
-
-
             bancoDePreguntas[0].preguntas[0].enunciadoDeLaPregunta = "¿En cuál ciudad se encuentra la torre Eiffel?";
             bancoDePreguntas[0].preguntas[0].respuestaCorrecta = 2;
             bancoDePreguntas[0].preguntas[0].respuestasDeLaPregunta[0].EnunciadoDeLaRespuesta = "Ciudad de México";
@@ -94,11 +85,9 @@ namespace LogicaJuego
 
 
 
-
-
-
-
             bancoDePreguntas[1].nombreDeLaDificultad = "Fácil";
+
+
 
             bancoDePreguntas[1].preguntas[1].enunciadoDeLaPregunta = "¿Cuál de estas ciudades no es de estados unidos?";
             bancoDePreguntas[1].preguntas[1].respuestaCorrecta = 2;
@@ -143,7 +132,9 @@ namespace LogicaJuego
             bancoDePreguntas[1].preguntas[1].respuestasDeLaPregunta[3].EnunciadoDeLaRespuesta = "Nagasaki";
 
 
+
             bancoDePreguntas[2].nombreDeLaDificultad = "Normal";
+
 
 
             bancoDePreguntas[2].preguntas[2].enunciadoDeLaPregunta = "¿En cuál de estas ciudades se supone que inicio el COVID-19?";
@@ -183,8 +174,8 @@ namespace LogicaJuego
             bancoDePreguntas[2].preguntas[2].respuestasDeLaPregunta[3].EnunciadoDeLaRespuesta = "Zaragoza";
 
 
-            bancoDePreguntas[3].nombreDeLaDificultad = "Difícil";
 
+            bancoDePreguntas[3].nombreDeLaDificultad = "Difícil";
 
 
 
@@ -225,8 +216,8 @@ namespace LogicaJuego
 
 
 
-
             bancoDePreguntas[4].nombreDeLaDificultad = "Muy Difícil";
+
 
 
             bancoDePreguntas[4].preguntas[4].enunciadoDeLaPregunta = "¿Cuál es el nombre de la ciudad azteca llamada Tenochtitlan en tiempos modernos?";
