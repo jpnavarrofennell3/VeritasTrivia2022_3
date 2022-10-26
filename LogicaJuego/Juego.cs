@@ -150,12 +150,12 @@ namespace LogicaJuego
             bancoDePreguntas[2].preguntas[3].respuestasDeLaPregunta[2].EnunciadoDeLaRespuesta = "Pathfinder";
             bancoDePreguntas[2].preguntas[3].respuestasDeLaPregunta[3].EnunciadoDeLaRespuesta = "Crypto";
 
-            bancoDePreguntas[2].preguntas[4].enunciadoDeLaPregunta = "¿Cual personaje habla español?";
+            bancoDePreguntas[2].preguntas[4].enunciadoDeLaPregunta = "¿Cual fue el segundo mapa de Apex?";
             bancoDePreguntas[2].preguntas[4].respuestaCorrecta = 1;
-            bancoDePreguntas[2].preguntas[4].respuestasDeLaPregunta[0].EnunciadoDeLaRespuesta = "Horizon";
-            bancoDePreguntas[2].preguntas[4].respuestasDeLaPregunta[1].EnunciadoDeLaRespuesta = "Octane";
-            bancoDePreguntas[2].preguntas[4].respuestasDeLaPregunta[2].EnunciadoDeLaRespuesta = "Caustic";
-            bancoDePreguntas[2].preguntas[4].respuestasDeLaPregunta[3].EnunciadoDeLaRespuesta = "Vanguard";
+            bancoDePreguntas[2].preguntas[4].respuestasDeLaPregunta[0].EnunciadoDeLaRespuesta = "Kings Cannon";
+            bancoDePreguntas[2].preguntas[4].respuestasDeLaPregunta[1].EnunciadoDeLaRespuesta = "Worlds Edge";
+            bancoDePreguntas[2].preguntas[4].respuestasDeLaPregunta[2].EnunciadoDeLaRespuesta = "Olympus";
+            bancoDePreguntas[2].preguntas[4].respuestasDeLaPregunta[3].EnunciadoDeLaRespuesta = "New Moon";
         }
     }
 }
