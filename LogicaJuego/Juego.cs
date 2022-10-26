@@ -14,6 +14,7 @@ namespace LogicaJuego
         int nivelDeDificultad;
         int numeroDePregunta;
         Random generadorDeNumerosAleatorios;
+        int respuestaDelUsuario;
 
         // Método constructor
         public Juego()
@@ -27,38 +28,52 @@ namespace LogicaJuego
             numeroDePregunta = generadorDeNumerosAleatorios.Next(0, 5);
         }
 
+        public void ProgresarJuego()
+        {
+            // 013
+            nivelDeDificultad += 1; // nivelDeDificultad = nivelDeDificultad + 1;
+            numeroDePregunta = generadorDeNumerosAleatorios.Next(0, 5);
+        }
+
+        // Método que me entrega una pregunta del banco de pregunta en la dificultada
+        // actual
+        public string ObtenerPregunta()
+        {
+            return bancoDePreguntas[nivelDeDificultad].preguntas[numeroDePregunta].enunciadoDeLaPregunta;
+        }
+
+        // Método que responde la pregunta actual en la dificultad actual.
+        // Recibe un un valor que guarda en respuestaDelUsuario
+        public void ReponderPregunta(int parametro)
+        {
+            respuestaDelUsuario = parametro;
+        }
+
+        // Método que me indica si el jugador acerto o falla la pregunta 
+        // Si acertó, el método devuelve el valor TRUE
+        // Caso contrario, devuelve false.
+        public bool EvaluarRespuesta()
+        {
+            if ( respuestaDelUsuario ==  bancoDePreguntas[nivelDeDificultad].preguntas[numeroDePregunta].respuestaCorrecta )
+
+                return true;
+            else
+                return false;
+
+        }
 
 
-        // Método que inicia el juego
-        public void IniciarJuego() 
-        { }
+
+
+
 
         // Método que se ejecuta al perder el juego
         public void PerderJuego()
         { }
 
-        // Método que me entrega una pregunta del banco de pregunta en la dificultada
-        // actual
-        public void ObtenerPregunta()
-        { }
-
-        // Método que responde la pregunta actual en la dificultad actual.
-        public void ReponderPregunta()
-        {
-
-        }
-
         // Método que me da la respuesta de la pregunta actual en la dificultad actual
-        public void ObtenerRespuesta()
+        public void ObtenerRespuestasPosibles()
         { }
-
-        public void EvaluarRespuesta()
-        { }
-
-        public void ProgresarJuego()
-        {
-            nivelDeDificultad += 1; // nivelDeDificultad = nivelDeDificultad + 1;
-        }
 
         public void FinJuego()
         { }
@@ -70,6 +85,8 @@ namespace LogicaJuego
 
             // Nivel muy fácil
             bancoDePreguntas[0].nombreDeLaDificultad = "Muy Fácil";
+
+            
 
 
         }
