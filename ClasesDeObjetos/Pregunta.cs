@@ -10,6 +10,7 @@ namespace ClasesDeObjetos
     {
         public string enunciadoDeLaPregunta;
         public Respuesta[] respuestasDeLaPregunta;
+        // 003
         public int respuestaCorrecta;
 
         public Pregunta()
