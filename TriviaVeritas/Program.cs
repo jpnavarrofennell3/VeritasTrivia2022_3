@@ -60,7 +60,7 @@
             Console.WriteLine("Estudiante: Jose Vargas");
             Console.WriteLine("Estudiante: Bernardo Hidalgo Castro");
             Console.WriteLine("Estudiante: Kevin Villalobos Rodríguez");
-            Console.WriteLine("Estudiante: Ariana Díaz Luna");
+            Console.WriteLine("Estudiante: Ariana Díaz Luna, rama ardiaz");
             Console.WriteLine("Arte ASCII por ascii-art-generator.org.");            
             Console.ReadLine();
         }
