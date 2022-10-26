@@ -56,8 +56,8 @@
         static public void MostrarCreditos()
         {
 
-            Console.WriteLine("Creado por Juan Navarro.");
-            Console.WriteLine("Estudiante: André Rodríguez Artavia");
+            Console.WriteLine("Creado por Juan Navarro (Rama jpnavarro).");
+            Console.WriteLine("Estudiante: André Rodríguez Artavia (Rama André)");
             Console.WriteLine("Estudiante: Jose Vargas");
             Console.WriteLine("Estudiante: Bernardo Hidalgo Castro");
             Console.WriteLine("Estudiante: Kevin Villalobos Rodríguez");
