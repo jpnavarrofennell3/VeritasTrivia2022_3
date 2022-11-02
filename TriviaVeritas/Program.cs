@@ -9,7 +9,7 @@ namespace TriviaVeritas
             int seleccionDelUsuario = 0;
 
             // Gameloop
-            while(seleccionDelUsuario != 3)
+            while(seleccionDelUsuario != 4)
             {
                 // desplegar la portada del juego
                 MostrarPortada();
@@ -31,15 +31,28 @@ namespace TriviaVeritas
                 else if (seleccionDelUsuario == 2)
                 {
                     // desplegar los créditos del juego
-                    MostrarCreditos();
+                    MostrarInstrucciones();
                 }
+
                 // si la persona escribio 3
                 else if (seleccionDelUsuario == 3)
+                {
+                    // desplegar los créditos del juego
+                    MostrarCreditos();
+                }
+                // si la persona escribio 4
+                else if (seleccionDelUsuario == 4)
                 {
                     Console.WriteLine("Ha escogido salir");
                     Console.ReadLine();
                 }
             }
+        }
+
+        static public void MostarInstruciones()
+        {
+            Console.WriteLine("Instrucciones del juego");
+            Console.ReadLine();
         }
          
         /// <summary>
@@ -105,8 +118,9 @@ namespace TriviaVeritas
         static public void MostrarOpciones() 
         {
             Console.WriteLine("1 - Iniciar Juego");
-            Console.WriteLine("2 - Creditos");
-            Console.WriteLine("3 - Salir");
+            Console.WriteLine("2 - Instrucciones");
+            Console.WriteLine("3 - Creditos");
+            Console.WriteLine("4 - Salir");
             Console.Write("Digite su seleccion: ");
         }
     }
