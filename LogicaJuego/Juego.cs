@@ -78,8 +78,6 @@ namespace LogicaJuego
 
         }
 
-
-
         // Método que me da la respuesta de la pregunta actual en la dificultad actual
         //public Respuesta[] ObtenerRespuestasPosibles()
         //{
@@ -100,7 +98,6 @@ namespace LogicaJuego
         {
             return bancoDePreguntas[nivelDeDificultad].preguntas[numeroDePregunta].respuestaCorrecta;
         }
-
 
         public void CargarDatos()
         {
