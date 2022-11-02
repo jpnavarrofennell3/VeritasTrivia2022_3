@@ -1,6 +1,6 @@
 
 
-using LogicaJuego
+using LogicaJuego;
 
 
 namespace TriviaVeritas
@@ -34,14 +34,18 @@ namespace TriviaVeritas
                 else if (seleccionDelUsuario == 2)
                 {
                     // desplegar los créditos del juego
-                    MostrarCreditos();
+                    MostrarInstruciones();
                 }
                 // si la persona escribio 3
                 else if (seleccionDelUsuario == 3)
                 {
-                    Console.WriteLine("Ha escogido salir");
-                    Console.ReadLine();
-                }
+                    MostrarCreditos
+
+                 else if (seleccionDelUsuario == 4)
+                    {
+                        Console.WriteLine("Ha escogido salir");
+                        Console.ReadLine();
+                    }
             }
         }
          
@@ -58,6 +62,20 @@ namespace TriviaVeritas
         /// Esta función mustra los créditos de la trivia
         /// </summary>
 
+             static public void MostrarInstruciones()
+        {
+
+            Console.WriteLine("Creado por Juan Navarro.");
+            Console.WriteLine("Estudiante: André Rodríguez Artavia ");
+            Console.WriteLine("Estudiante: Jose Vargas");
+            Console.WriteLine("Estudiante: Bernardo Hidalgo Castro");
+            Console.WriteLine("Estudiante: Kevin Villalobos Rodríguez");
+            Console.WriteLine("Estudiante: Mario Venegas Venegas(Rama Principal)");
+            Console.WriteLine("Estudiante: Ariana Díaz Luna");
+            Console.WriteLine("Arte ASCII por ascii-art-generator.org.");
+            Console.ReadLine(); 
+
+        }
         static public void MostrarCreditos()
         {
 
@@ -109,8 +127,9 @@ namespace TriviaVeritas
         static public void MostrarOpciones() 
         {
             Console.WriteLine("1 - Iniciar Juego");
-            Console.WriteLine("2 - Creditos");
-            Console.WriteLine("3 - Salir");
+            Console.WriteLine("2 - Instrucciones");
+            Console.WriteLine("3 - Creditos");
+            Console.WriteLine("4 - Salir");
             Console.Write("Digite su seleccion: ");
         }
     }
