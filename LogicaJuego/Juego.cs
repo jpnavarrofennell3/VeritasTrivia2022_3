@@ -22,6 +22,83 @@ namespace LogicaJuego
         {
             //004
             bancoDePreguntas = new Dificultad[5];
+
+            bancoDePreguntas[0] = new Dificultad();
+            bancoDePreguntas[1] = new Dificultad();
+            bancoDePreguntas[2] = new Dificultad();
+            bancoDePreguntas[3] = new Dificultad();
+            bancoDePreguntas[4] = new Dificultad();
+
+            bancoDePreguntas[0].preguntas = new Pregunta[5];
+
+            bancoDePreguntas[0].preguntas[0] = new Pregunta();
+            bancoDePreguntas[0].preguntas[1] = new Pregunta();
+            bancoDePreguntas[0].preguntas[2] = new Pregunta();
+            bancoDePreguntas[0].preguntas[3] = new Pregunta();
+            bancoDePreguntas[0].preguntas[4] = new Pregunta();
+
+            bancoDePreguntas[1].preguntas = new Pregunta[5];
+
+            bancoDePreguntas[1].preguntas[0] = new Pregunta();
+            bancoDePreguntas[1].preguntas[1] = new Pregunta();
+            bancoDePreguntas[1].preguntas[2] = new Pregunta();
+            bancoDePreguntas[1].preguntas[3] = new Pregunta();
+            bancoDePreguntas[1].preguntas[4] = new Pregunta();
+
+            bancoDePreguntas[2].preguntas = new Pregunta[5];
+
+            bancoDePreguntas[2].preguntas[0] = new Pregunta();
+            bancoDePreguntas[2].preguntas[1] = new Pregunta();
+            bancoDePreguntas[2].preguntas[2] = new Pregunta();
+            bancoDePreguntas[2].preguntas[3] = new Pregunta();
+            bancoDePreguntas[2].preguntas[4] = new Pregunta();
+
+            bancoDePreguntas[3].preguntas = new Pregunta[5];
+
+            bancoDePreguntas[3].preguntas[0] = new Pregunta();
+            bancoDePreguntas[3].preguntas[1] = new Pregunta();
+            bancoDePreguntas[3].preguntas[2] = new Pregunta();
+            bancoDePreguntas[3].preguntas[3] = new Pregunta();
+            bancoDePreguntas[3].preguntas[4] = new Pregunta();
+
+            bancoDePreguntas[4].preguntas = new Pregunta[5];
+
+            bancoDePreguntas[4].preguntas[0] = new Pregunta();
+            bancoDePreguntas[4].preguntas[1] = new Pregunta();
+            bancoDePreguntas[4].preguntas[2] = new Pregunta();
+            bancoDePreguntas[4].preguntas[3] = new Pregunta();
+            bancoDePreguntas[4].preguntas[4] = new Pregunta();
+
+            bancoDePreguntas[0].preguntas[0].respuestasDeLaPregunta = new Respuesta[4];
+            bancoDePreguntas[0].preguntas[1].respuestasDeLaPregunta = new Respuesta[4];
+            bancoDePreguntas[0].preguntas[2].respuestasDeLaPregunta = new Respuesta[4];
+            bancoDePreguntas[0].preguntas[3].respuestasDeLaPregunta = new Respuesta[4];
+            bancoDePreguntas[0].preguntas[4].respuestasDeLaPregunta = new Respuesta[4];
+
+            bancoDePreguntas[1].preguntas[0].respuestasDeLaPregunta = new Respuesta[4];
+            bancoDePreguntas[1].preguntas[1].respuestasDeLaPregunta = new Respuesta[4];
+            bancoDePreguntas[1].preguntas[2].respuestasDeLaPregunta = new Respuesta[4];
+            bancoDePreguntas[1].preguntas[3].respuestasDeLaPregunta = new Respuesta[4];
+            bancoDePreguntas[1].preguntas[4].respuestasDeLaPregunta = new Respuesta[4];
+
+            bancoDePreguntas[2].preguntas[0].respuestasDeLaPregunta = new Respuesta[4];
+            bancoDePreguntas[2].preguntas[1].respuestasDeLaPregunta = new Respuesta[4];
+            bancoDePreguntas[2].preguntas[2].respuestasDeLaPregunta = new Respuesta[4];
+            bancoDePreguntas[2].preguntas[3].respuestasDeLaPregunta = new Respuesta[4];
+            bancoDePreguntas[2].preguntas[4].respuestasDeLaPregunta = new Respuesta[4];
+
+            bancoDePreguntas[3].preguntas[0].respuestasDeLaPregunta = new Respuesta[4];
+            bancoDePreguntas[3].preguntas[1].respuestasDeLaPregunta = new Respuesta[4];
+            bancoDePreguntas[3].preguntas[2].respuestasDeLaPregunta = new Respuesta[4];
+            bancoDePreguntas[3].preguntas[3].respuestasDeLaPregunta = new Respuesta[4];
+            bancoDePreguntas[3].preguntas[4].respuestasDeLaPregunta = new Respuesta[4];
+
+            bancoDePreguntas[4].preguntas[0].respuestasDeLaPregunta = new Respuesta[4];
+            bancoDePreguntas[4].preguntas[1].respuestasDeLaPregunta = new Respuesta[4];
+            bancoDePreguntas[4].preguntas[2].respuestasDeLaPregunta = new Respuesta[4];
+            bancoDePreguntas[4].preguntas[3].respuestasDeLaPregunta = new Respuesta[4];
+            bancoDePreguntas[4].preguntas[4].respuestasDeLaPregunta = new Respuesta[4];
+
             CargarDatos();
             nivelDeDificultad = 0;
             // creo el objeto que me da números aleatorios.
