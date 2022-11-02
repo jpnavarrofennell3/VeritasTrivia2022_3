@@ -10,11 +10,11 @@ namespace LogicaJuego
     public class Juego
     {
         // propiedades ó variables
-        Dificultad[] bancoDePreguntas;
-        int nivelDeDificultad;
-        int numeroDePregunta;
-        Random generadorDeNumerosAleatorios;
-        int respuestaDelUsuario;
+        private Dificultad[] bancoDePreguntas;
+        private int nivelDeDificultad;
+        private int numeroDePregunta;
+        private Random generadorDeNumerosAleatorios;
+        private int respuestaDelUsuario;
 
         // Método constructor
         public Juego()
@@ -24,7 +24,7 @@ namespace LogicaJuego
             nivelDeDificultad = 0;
             // creo el objeto que me da números aleatorios.
             generadorDeNumerosAleatorios = new Random();
-            // según el manual, me entrega un numero int del 1 al 5 sin incluir el 5.
+            // según el manual, me entrega un numero int del 0 al 4 sin incluir el 5.
             numeroDePregunta = generadorDeNumerosAleatorios.Next(0, 5);
         }
 
@@ -64,8 +64,26 @@ namespace LogicaJuego
 
 
         // Método que me da la respuesta de la pregunta actual en la dificultad actual
-        public void ObtenerRespuestasPosibles()
-        { }
+        //public Respuesta[] ObtenerRespuestasPosibles()
+        //{
+        //    Respuesta[] respuestasPosiblesTemporal = bancoDePreguntas[nivelDeDificultad].preguntas[numeroDePregunta].respuestasDeLaPregunta;
+        //    return respuestasPosiblesTemporal;
+        //}
+
+        public string ObtenerRespuestasPosibles(int indice) // indice es de 0-3
+        {
+            return
+                bancoDePreguntas[nivelDeDificultad].    // 2
+                    preguntas[numeroDePregunta].        // 0
+                        respuestasDeLaPregunta[indice]. // 3
+                            EnunciadoDeLaRespuesta;     // YuGiOh
+        }
+
+        public int DarRespuestaCorrecta(int indice)
+        {
+            return bancoDePreguntas[nivelDeDificultad].preguntas[numeroDePregunta].respuestaCorrecta;
+        }
+
 
         public void CargarDatos()
         {
@@ -73,7 +91,9 @@ namespace LogicaJuego
             //Por ejemplo: bancoDePreguntas 0/Pregunta 0/enunciadoDeLaPregunta/ 'Pregunta'.
 
             // Nivel muy fácil
-            bancoDePreguntas[0].nombreDeLaDificultad = "Muy Fácil";
+
+
+            bancoDePreguntas[0].nombreDeLaDificultad = "Muy fácil";
 
             bancoDePreguntas[0].preguntas[0].enunciadoDeLaPregunta = "¿Cuál es el primer planeta del sistema solar?";
             bancoDePreguntas[0].preguntas[0].respuestaCorrecta = 1;
@@ -262,6 +282,7 @@ namespace LogicaJuego
             bancoDePreguntas[4].preguntas[4].respuestasDeLaPregunta[1].EnunciadoDeLaRespuesta = "Una estrella de neutrones";
             bancoDePreguntas[4].preguntas[4].respuestasDeLaPregunta[2].EnunciadoDeLaRespuesta = "Una gigante roja";
             bancoDePreguntas[4].preguntas[4].respuestasDeLaPregunta[3].EnunciadoDeLaRespuesta = "Una enana blanca";
+
 
 
         }
