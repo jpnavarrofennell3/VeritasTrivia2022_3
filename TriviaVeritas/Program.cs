@@ -49,7 +49,7 @@ namespace TriviaVeritas
             }
         }
 
-        static public void MostarInstruciones()
+        static public void MostrarInstruciones()
         {
             Console.WriteLine("Instrucciones del juego");
             Console.ReadLine();
