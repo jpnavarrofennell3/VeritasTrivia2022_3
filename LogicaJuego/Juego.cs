@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,11 +11,11 @@ namespace LogicaJuego
     public class Juego
     {
         // propiedades ó variables
-        Dificultad[] bancoDePreguntas;
-        int nivelDeDificultad;
-        int numeroDePregunta;
-        Random generadorDeNumerosAleatorios;
-        int respuestaDelUsuario;
+        private Dificultad[] bancoDePreguntas;
+        private int nivelDeDificultad;
+        private int numeroDePregunta;
+        private Random generadorDeNumerosAleatorios;
+        private int respuestaDelUsuario;
 
         // Método constructor
         public Juego()
@@ -24,7 +25,7 @@ namespace LogicaJuego
             nivelDeDificultad = 0;
             // creo el objeto que me da números aleatorios.
             generadorDeNumerosAleatorios = new Random();
-            // según el manual, me entrega un numero int del 1 al 5 sin incluir el 5.
+            // según el manual, me entrega un numero int del 0 al 4 sin incluir el 5.
             numeroDePregunta = generadorDeNumerosAleatorios.Next(0, 5);
         }
 
@@ -67,8 +68,24 @@ namespace LogicaJuego
         }
 
         // Método que me da la respuesta de la pregunta actual en la dificultad actual
-        public void ObtenerRespuestasPosibles()
-        { }
+        //Public int devuelve un int esto funciona con cualquier otro tipo de variable. Ya sea FLOAT BOOL,STRING, etc.
+       // public Respuesta[] ObtenerRespuestasPosibles()
+        //{
+        //    Respuesta[] respuestasPosiblesTemporal =
+        //    bancoDePreguntas[nivelDeDificultad].preguntas[numeroDePregunta].respuestasDeLaPregunta;
+        //    return respuestasPosiblesTemporal;    
+       // }
+
+        public string ObtenerRespuestasPosibles(int indice)
+        {
+            return bancoDePreguntas[nivelDeDificultad].preguntas[numeroDePregunta].respuestasDeLaPregunta[indice].EnunciadoDeLaRespuesta;
+
+        }
+
+        public int DarRespuestaCorrecta(int indice)
+        {
+            return bancoDePreguntas[nivelDeDificultad].preguntas[numeroDePregunta].respuestaCorrecta;
+        }
 
         public void CargarDatos()
         {
