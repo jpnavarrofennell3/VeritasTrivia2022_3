@@ -19,12 +19,16 @@ namespace LogicaJuego
         // Método constructor
         public Juego()
         {
+            // 004
             bancoDePreguntas = new Dificultad[5];
+
             CargarDatos();
+
             nivelDeDificultad = 0;
             // creo el objeto que me da números aleatorios.
             generadorDeNumerosAleatorios = new Random();
             // según el manual, me entrega un numero int del 0 al 4 sin incluir el 5.
+            // 021
             numeroDePregunta = generadorDeNumerosAleatorios.Next(0, 5);
         }
 
@@ -32,6 +36,16 @@ namespace LogicaJuego
         {
             // 013
             nivelDeDificultad += 1; // nivelDeDificultad = nivelDeDificultad + 1;
+            // 021
+            numeroDePregunta = generadorDeNumerosAleatorios.Next(0, 5);
+        }
+
+        public void PerderJuego()
+        {
+            // 011
+            nivelDeDificultad = 0;
+
+            // 021
             numeroDePregunta = generadorDeNumerosAleatorios.Next(0, 5);
         }
 
@@ -46,6 +60,7 @@ namespace LogicaJuego
         // Recibe un un valor que guarda en respuestaDelUsuario
         public void ReponderPregunta(int parametro)
         {
+
             respuestaDelUsuario = parametro;
         }
 
@@ -55,13 +70,13 @@ namespace LogicaJuego
         public bool EvaluarRespuesta()
         {
             if ( respuestaDelUsuario ==  bancoDePreguntas[nivelDeDificultad].preguntas[numeroDePregunta].respuestaCorrecta )
-
+                // 012
                 return true;
             else
+                // 011
                 return false;
 
         }
-
 
         // Método que me da la respuesta de la pregunta actual en la dificultad actual
         //public Respuesta[] ObtenerRespuestasPosibles()
@@ -83,7 +98,6 @@ namespace LogicaJuego
         {
             return bancoDePreguntas[nivelDeDificultad].preguntas[numeroDePregunta].respuestaCorrecta;
         }
-
 
         public void CargarDatos()
         {
