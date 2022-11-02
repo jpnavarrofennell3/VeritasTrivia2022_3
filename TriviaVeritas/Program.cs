@@ -31,7 +31,7 @@ namespace TriviaVeritas
                 else if (seleccionDelUsuario == 2)
                 {
                     // desplegar los créditos del juego
-                    MostrarInstrucciones();
+                    MostrarInstruciones();
                 }
 
                 // si la persona escribio 3
