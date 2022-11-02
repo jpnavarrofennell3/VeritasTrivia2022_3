@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="C:\Users\chepe\OneDrive\Escritorio\Veritas\2022_III\Programacion\Juego_copia.cs" Link="Juego_copia.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\ClasesDeObjetos\ClasesDeObjetos.csproj" />
   </ItemGroup>
 

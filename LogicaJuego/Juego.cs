@@ -73,7 +73,8 @@ namespace LogicaJuego
             //Por ejemplo: bancoDePreguntas 0/Pregunta 0/enunciadoDeLaPregunta/ 'Pregunta'.
 
             // Nivel muy fácil
-            bancoDePreguntas[0].nombreDeLaDificultad = "Muy Fácil";
+      
+
 
             bancoDePreguntas[0].preguntas[0].enunciadoDeLaPregunta = "¿Cuál es la capital de Japón?";
             bancoDePreguntas[0].preguntas[0].respuestaCorrecta = 0;
