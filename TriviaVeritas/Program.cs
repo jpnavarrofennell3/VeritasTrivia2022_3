@@ -26,12 +26,16 @@ namespace TriviaVeritas
                 {
                     Console.WriteLine("Ha escogido iniciar el juego");
                     Console.ReadLine();
+                    IniciarJuego();
+
                 }
                 // si la persona escribio 2
                 else if (seleccionDelUsuario == 2)
                 {
                     // desplegar los créditos del juego
+
                     MostrarInstruciones();
+
                 }
 
                 // si la persona escribio 3
@@ -49,7 +53,9 @@ namespace TriviaVeritas
             }
         }
 
+
         static public void MostrarInstruciones()
+
         {
             Console.WriteLine("Instrucciones del juego");
             Console.ReadLine();
@@ -88,7 +94,44 @@ namespace TriviaVeritas
         /// </summary>
         static public void IniciarJuego()
         {
+            int respuestaDelJugador;
+
             Juego juegoActual = new Juego();
+
+
+            Console.WriteLine( "Usted esta en nivel 0");
+
+            // Desplegamos la pregunta
+            Console.WriteLine( juegoActual.ObtenerPregunta() );
+
+            // Desplegar pusibles respuestas
+            Console.WriteLine(juegoActual.ObtenerRespuestasPosibles(0));
+            Console.WriteLine(juegoActual.ObtenerRespuestasPosibles(1));
+            Console.WriteLine(juegoActual.ObtenerRespuestasPosibles(2));
+            Console.WriteLine(juegoActual.ObtenerRespuestasPosibles(3));
+
+            // Capturo la respuesta del jugador
+            respuestaDelJugador = CapturarNumero();
+            juegoActual.ReponderPregunta(respuestaDelJugador);
+            
+            // Evaluar la respuesta del jugador
+            if ( juegoActual.EvaluarRespuesta() == true)
+            {
+                // Ejecutar condición de gane
+                Console.WriteLine("¡Correcto, has acertado!");
+
+                // Repetición del problema con mayor dificultad.
+                juegoActual.ProgresarJuego();
+
+                
+            }
+            else
+            {
+                // Ejecutar condición de perdida si el jugador no acerto
+                Console.WriteLine("¡Juego Terminado!");
+
+                juegoActual.PerderJuego();
+            }
         }
         
         /// <summary>
