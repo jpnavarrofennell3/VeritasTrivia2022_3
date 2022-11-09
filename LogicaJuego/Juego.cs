@@ -17,6 +17,14 @@ namespace LogicaJuego
         private Random generadorDeNumerosAleatorios;
         private int respuestaDelUsuario;
 
+        //Metodo que Retorna la dificultad actual
+        public int ObtenerDificultadActual()
+        {
+
+            return nivelDeDificultad;   
+
+        }
+
         // Método constructor
         public Juego()
         {
