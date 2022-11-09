@@ -26,12 +26,14 @@ namespace TriviaVeritas
                 {
                     Console.WriteLine("Ha escogido iniciar el juego");
                     Console.ReadLine();
+                    IniciarJuego();
+
                 }
                 // si la persona escribio 2
                 else if (seleccionDelUsuario == 2)
                 {
                     // desplegar los créditos del juego
-                    MostrarInstrucciones();
+                    MostarInstrucciones();
                 }
 
                 // si la persona escribio 3
@@ -49,8 +51,10 @@ namespace TriviaVeritas
             }
         }
 
-        static public void MostarInstruciones()
+        static public void MostarInstrucciones()
         {
+            // Todo juego que desarrollemos debe mostrar
+            // o explicar como se juega
             Console.WriteLine("Instrucciones del juego");
             Console.ReadLine();
         }
@@ -60,6 +64,8 @@ namespace TriviaVeritas
         /// </summary>
         static public void MostrarPortada()
         {
+            // 006
+            // 015
             Console.Clear();
             Console.WriteLine("__ __|   _)       _)       \r\n   |  __| |\\ \\   / |  _` | \r\n   | |    | \\ \\ /  | (   | \r\n  _|_|   _|  \\_/  _|\\__,_| \r\n                           \r\n\\ \\     /        _) |              \r\n \\ \\   / _ \\  __| | __|  _` |  __| \r\n  \\ \\ /  __/ |    | |   (   |\\__ \\ \r\n   \\_/ \\___|_|   _|\\__|\\__,_|____/ ");
         }
@@ -68,9 +74,10 @@ namespace TriviaVeritas
         /// Esta función mustra los créditos de la trivia
         /// </summary>
 
+
         static public void MostrarCreditos()
         {
-
+            // 019
             Console.WriteLine("Creado por Juan Navarro.");
             Console.WriteLine("Estudiante: André Rodríguez Artavia ");
             Console.WriteLine("Estudiante: Jose Vargas");
@@ -88,7 +95,44 @@ namespace TriviaVeritas
         /// </summary>
         static public void IniciarJuego()
         {
+            int respuestaDelJugador;
+
             Juego juegoActual = new Juego();
+
+
+            Console.WriteLine( "Usted esta en nivel 0");
+
+            // Desplegamos la pregunta
+            Console.WriteLine( juegoActual.ObtenerPregunta() );
+
+            // Desplegar pusibles respuestas
+            Console.WriteLine(juegoActual.ObtenerRespuestasPosibles(0));
+            Console.WriteLine(juegoActual.ObtenerRespuestasPosibles(1));
+            Console.WriteLine(juegoActual.ObtenerRespuestasPosibles(2));
+            Console.WriteLine(juegoActual.ObtenerRespuestasPosibles(3));
+
+            // Capturo la respuesta del jugador
+            respuestaDelJugador = CapturarNumero();
+            juegoActual.ReponderPregunta(respuestaDelJugador);
+            
+            // Evaluar la respuesta del jugador
+            if ( juegoActual.EvaluarRespuesta() == true)
+            {
+                // Ejecutar condición de gane
+                Console.WriteLine("¡Correcto, has acertado!");
+
+                // Repetición del problema con mayor dificultad.
+                juegoActual.ProgresarJuego();
+
+                
+            }
+            else
+            {
+                // Ejecutar condición de perdida si el jugador no acerto
+                Console.WriteLine("¡Juego Terminado!");
+
+                juegoActual.PerderJuego();
+            }
         }
         
         /// <summary>
@@ -97,6 +141,7 @@ namespace TriviaVeritas
         /// <returns></returns>
         static public int CapturarNumero()
         {
+            // Principio DRY: Dont repeat yourself
             try
             {
                 string textoEscritoPorElUsuario;
@@ -117,6 +162,7 @@ namespace TriviaVeritas
         /// </summary>
         static public void MostrarOpciones() 
         {
+            // 006 - parte de la portada
             Console.WriteLine("1 - Iniciar Juego");
             Console.WriteLine("2 - Instrucciones");
             Console.WriteLine("3 - Creditos");
