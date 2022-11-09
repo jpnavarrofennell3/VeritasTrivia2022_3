@@ -69,8 +69,15 @@ namespace TriviaVeritas
             {
             //Todo juego que se desarrolla debe explicar como se juega
             Console.WriteLine("Instrucciones:");
-
-            }
+            Console.WriteLine("1- El juego cuenta con 5 dificultades: Muy Facil,Facil,Dificil,Muy Dificil");
+            Console.WriteLine("2- Al comenzar se le presentara el enunciado de la pregunta y 4 respuestas posibles.");
+            Console.WriteLine("3- La respuestas vienen enumeradas.");
+            Console.WriteLine("4- El jugador debera dijitar el numero de la respuesta que cree que es correcta.");
+            Console.WriteLine("5- Solo se aceptan numero del 0 al 3 para las respuestas");
+            Console.WriteLine("6- Si la respuesta es correcta se avanza al siguiente nivel.");
+            Console.WriteLine("4- Si la respuesta es incorrecta se devuelve al menu.");
+            Console.ReadLine();
+        }
         //019
         static public void MostrarCreditos()
             {
@@ -110,10 +117,10 @@ namespace TriviaVeritas
 
                     //010
                     //Desplegar Respuesta
-                    Console.WriteLine("0" + juegoActual.ObtenerRespuestasPosibles(0));
-                    Console.WriteLine("1" + juegoActual.ObtenerRespuestasPosibles(1));
-                    Console.WriteLine("2" + juegoActual.ObtenerRespuestasPosibles(2));
-                    Console.WriteLine("3" + juegoActual.ObtenerRespuestasPosibles(3));
+                    Console.WriteLine("0- " + juegoActual.ObtenerRespuestasPosibles(0));
+                    Console.WriteLine("1- " + juegoActual.ObtenerRespuestasPosibles(1));
+                    Console.WriteLine("2- " + juegoActual.ObtenerRespuestasPosibles(2));
+                    Console.WriteLine("3- " + juegoActual.ObtenerRespuestasPosibles(3));
 
 
                     //Capturo la respuesta del Jugador
@@ -141,6 +148,7 @@ namespace TriviaVeritas
                             // Ejecutar condicion de perdida si el jugador no acerto.
                             Console.WriteLine("Respuesta Incorrecta");
                             Console.WriteLine("F. Juego terminado");
+                            Console.ReadLine();
                             juegoActual.PerderJuego();
 
                             //Romper el ciclo for
