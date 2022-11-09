@@ -16,6 +16,7 @@ namespace LogicaJuego
         private Random generadorDeNumerosAleatorios;
         private int respuestaDelUsuario;
 
+
         // Método constructor
         public Juego()
         {
@@ -504,6 +505,12 @@ namespace LogicaJuego
             bancoDePreguntas[4].preguntas[4].respuestasDeLaPregunta[2].EnunciadoDeLaRespuesta = "Xian";
             bancoDePreguntas[4].preguntas[4].respuestasDeLaPregunta[3].EnunciadoDeLaRespuesta = "Guangzhou";
 
+        }
+
+        // Método que retorna la dificultad actual
+        public int ObtenerDificultadActual()
+        {
+            return nivelDeDificultad;
         }
     }
 }
