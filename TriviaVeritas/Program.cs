@@ -98,11 +98,11 @@ namespace TriviaVeritas
             Juego juegoActual = new Juego();
             Console.WriteLine( "Usted esta en nivel {0}", juegoActual.ObtenerDificultadActual());
 
-            // Defino una variable que me dice cuantos niveles vamos a jugar 
+            // Defino una variable que me dice cuantos niveles vamos a jugar como límite
             int limite = 5;
 
             // necesitamos repetir el proceso de juego hasta el número
-            // que nos diga el limite
+            // que nos diga el límite
             for (int b =0; b < limite; b++)
             {
                 // 010
@@ -162,7 +162,7 @@ namespace TriviaVeritas
         }
         
         /// <summary>
-        /// Esta funcion transforma texto en numeros, si sucede un error regresa un -1
+        /// Esta funcion transforma texto en números, si sucede un error regresa un -1
         /// </summary>
         /// <returns></returns>
         static public int CapturarNumero()
