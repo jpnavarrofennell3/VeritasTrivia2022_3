@@ -46,7 +46,7 @@ namespace TriviaVeritas
                 else if (seleccionDelUsuario == 4)
                 {
                     Console.WriteLine("Ha escogido salir");
-                    Console.ReadLine();
+                 
                 }
 
             }
@@ -54,6 +54,8 @@ namespace TriviaVeritas
             /// <summary>
             /// Esta funcion muestra la portada de trivia
             /// </summary>
+            /// 006
+            /// 015
             static public void MostrarPortada()
             {
                 Console.Clear();
@@ -65,10 +67,11 @@ namespace TriviaVeritas
             /// </summary>
             static public void MostrarInstruciones()
             {
+            //Todo juego que se desarrolla debe explicar como se juega
             Console.WriteLine("Instrucciones:");
 
             }
-
+        //019
         static public void MostrarCreditos()
             {
 
@@ -92,41 +95,79 @@ namespace TriviaVeritas
                 int respuestaDelJugador;
 
                 Juego juegoActual = new Juego();
-                Console.WriteLine("Usted esta en el nivel 0");
-                //Desplegamos la pregunta
-                Console.WriteLine(juegoActual.ObtenerPregunta());
-                //Desplegar Respuesta
-                Console.WriteLine(juegoActual.ObtenerRespuestasPosibles(0));
-                Console.WriteLine(juegoActual.ObtenerRespuestasPosibles(1));
-                Console.WriteLine(juegoActual.ObtenerRespuestasPosibles(2));
-                Console.WriteLine(juegoActual.ObtenerRespuestasPosibles(3));
 
-                //Capturo la respuesta del Jugador
-                respuestaDelJugador = CapturarNumero();
-                juegoActual.ReponderPregunta(respuestaDelJugador);
+                Console.WriteLine("Usted esta en el nivel {0}",juegoActual.ObtenerDificultadActual());
 
-                //Evaluar la respuesta del jugador
-                if(juegoActual.EvaluarRespuesta() == true)
+                //Defino una variable que me dice cuantos niveles vamos a jugar
+                int limite = 5;
+
+                //Necesitamos repetir el proceso de juego hasta el numero que nos diga el limite.
+                for(int i = 0; i < limite; i++)
                 {
-                    //Ejecutar condicion de Victoria
-                    Console.WriteLine("Correcto, has acertado!!!!!!");
-                    //Repeticion del Problma con mayor dificultad
-                    juegoActual.ProgresarJuego();
+                    //010
+                    //Desplegamos la pregunta
+                    Console.WriteLine(juegoActual.ObtenerPregunta());
+
+                    //010
+                    //Desplegar Respuesta
+                    Console.WriteLine("0" + juegoActual.ObtenerRespuestasPosibles(0));
+                    Console.WriteLine("1" + juegoActual.ObtenerRespuestasPosibles(1));
+                    Console.WriteLine("2" + juegoActual.ObtenerRespuestasPosibles(2));
+                    Console.WriteLine("3" + juegoActual.ObtenerRespuestasPosibles(3));
+
+
+                    //Capturo la respuesta del Jugador
+                    respuestaDelJugador = CapturarNumero();
+
+
+                    //Llamo al metodo ResponderPregunta con el numero que escribio el jugador
+                    juegoActual.ReponderPregunta(respuestaDelJugador);
+
+                    //Evaluar la respuesta del jugador
+                    if (juegoActual.EvaluarRespuesta() == true)
+                        {
+                            //012
+                            //Ejecutar condicion de Victoria
+                            Console.WriteLine("Correcto, has acertado!!!!!!");
+
+                            //013
+                            //Repeticion del Problma con mayor dificultad
+                            juegoActual.ProgresarJuego();
+
+                        }
+                    else
+                        {
+                            //011
+                            // Ejecutar condicion de perdida si el jugador no acerto.
+                            Console.WriteLine("Respuesta Incorrecta");
+                            Console.WriteLine("F. Juego terminado");
+                            juegoActual.PerderJuego();
+
+                            //Romper el ciclo for
+                            break;
+                        }
+                        Console.ReadLine();
 
                 }
-                else
-                {
-                    // Ejecutar condicion de perdida si el jugador no acerto.
-                    Console.WriteLine("F. Juego terminado");
-                    juegoActual.PerderJuego();
-                }
+            //Como me doy cuenta que el jugador completo todos los niveles
+            //Si el nivel de dificultad llega al valor 5 el jugador supero todo el juego.
+
+            if (juegoActual.ObtenerDificultadActual() == 5)
+                { 
+                    //Comunicarle al jugador que ha superado el juego
+                    Console.WriteLine("Felicitaciones!");
+                    Console.WriteLine("Has completado el juego");
+                    Console.ReadLine();
 
             }
+
+        }
 
             /// <summary>
             /// Esta funcion transforma texto en numeros, si sucede un error regresa un -1
             /// </summary>
             /// <returns></returns>
+            /// Principio DRY: Dont Repeat Yourself
             static public int CapturarNumero()
             {
                 try
@@ -147,6 +188,7 @@ namespace TriviaVeritas
             /// <summary>
             /// Imprime en la pantalla las opciones que el usuario tiene. 
             /// </summary>
+            /// 006
             static public void MostrarOpciones()
             {
                 Console.WriteLine("1 - Iniciar Juego");
