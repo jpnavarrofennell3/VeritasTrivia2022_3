@@ -95,46 +95,69 @@ namespace TriviaVeritas
         static public void IniciarJuego()
         {
             int respuestaDelJugador;
-
             Juego juegoActual = new Juego();
-
             Console.WriteLine( "Usted esta en nivel {0}", juegoActual.ObtenerDificultadActual());
 
-            // 010
-            // Desplegamos la pregunta
-            Console.WriteLine( juegoActual.ObtenerPregunta() );
+            // Defino una variable que me dice cuantos niveles vamos a jugar 
+            int limite = 5;
 
-            // 010
-            // Desplegar posibles respuestas
-            Console.WriteLine(juegoActual.ObtenerRespuestasPosibles(0));
-            Console.WriteLine(juegoActual.ObtenerRespuestasPosibles(1));
-            Console.WriteLine(juegoActual.ObtenerRespuestasPosibles(2));
-            Console.WriteLine(juegoActual.ObtenerRespuestasPosibles(3));
-
-            // Capturo la respuesta del jugador
-            respuestaDelJugador = CapturarNumero();
-
-            // LLamo al método ResponderPRegunta con el número que escribió el jugador
-            juegoActual.ReponderPregunta(respuestaDelJugador);
-            
-            // Evaluar la respuesta del jugador
-            if ( juegoActual.EvaluarRespuesta() == true)
+            // necesitamos repetir el proceso de juego hasta el número
+            // que nos diga el limite
+            for (int b =0; b < limite; b++)
             {
-                // 012
-                // Ejecutar condición de gane
-                Console.WriteLine("¡Correcto, has acertado!");
+                // 010
+                // Desplegamos la pregunta
+                Console.WriteLine(juegoActual.ObtenerPregunta());
 
-                // 013
-                // Repetición del problema con mayor dificultad.
-                juegoActual.ProgresarJuego();
+                // 010
+                // Desplegar posibles respuestas
+                Console.WriteLine("0 - " + juegoActual.ObtenerRespuestasPosibles(0));
+                Console.WriteLine("1 - " + juegoActual.ObtenerRespuestasPosibles(1));
+                Console.WriteLine("2 - " + juegoActual.ObtenerRespuestasPosibles(2));
+                Console.WriteLine("3 - " + juegoActual.ObtenerRespuestasPosibles(3));
+
+                // Capturo la respuesta del jugador
+                respuestaDelJugador = CapturarNumero();
+
+                // LLamo al método ResponderPRegunta con el número que escribió el jugador
+                juegoActual.ReponderPregunta(respuestaDelJugador);
+
+                // Evaluar la respuesta del jugador
+                if (juegoActual.EvaluarRespuesta() == true)
+                {
+                    // 012
+                    // Ejecutar condición de gane
+                    Console.WriteLine("¡Correcto, has acertado!");
+
+                    // 013
+                    // Repetición del problema con mayor dificultad.
+                    juegoActual.ProgresarJuego();
+                }
+                else
+                {
+                    // 011
+                    // Ejecutar condición de perdida si el jugador no acerto
+                    Console.WriteLine("¡No has acertado!");
+                    Console.WriteLine("¡Juego Terminado!");
+
+                    juegoActual.PerderJuego();
+
+                    Console.ReadLine();
+
+                    // romper el ciclo for
+                    break;
+                }
+                Console.ReadLine();
             }
-            else
-            {
-                // 011
-                // Ejecutar condición de perdida si el jugador no acerto
-                Console.WriteLine("¡Juego Terminado!");
 
-                juegoActual.PerderJuego();
+            // Como me doy cuenta que el jugador completo todos los niveles?
+            // si el nivel de dificultad llega al valor 5 el jugador superó todo
+            // el juego
+            if ( juegoActual.ObtenerDificultadActual() == 5)
+            {
+                // Cominicarle al jugador que ha superado el juego
+                Console.WriteLine("¡Has superado el juego de trivia!");
+                Console.ReadLine();
             }
         }
         
