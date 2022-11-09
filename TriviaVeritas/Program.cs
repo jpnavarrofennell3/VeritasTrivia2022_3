@@ -60,12 +60,16 @@
             Console.WriteLine("Estudiante: André Rodríguez Artavia (Rama André)");
             Console.WriteLine("Estudiante: Jose Vargas");
             Console.WriteLine("Estudiante: Bernardo Hidalgo Castro");
+<<<<<<< HEAD
             Console.WriteLine("Estudiante: Kevin Villalobos Rodríguez Rama Okrin");
             Console.WriteLine("Rama editada por Bernardo Hidalgo Castro."); 
+=======
+            Console.WriteLine("Estudiante: Kevin Villalobos Rodríguez");
+>>>>>>> parent of bea654f (Merge pull request #7 from jpnavarrofennell3/Kevin)
             Console.WriteLine("Estudiante: Mario Venegas Venegas");
             Console.WriteLine("Estudiante: Ariana Díaz Luna");
             Console.WriteLine("Arte ASCII por ascii-art-generator.org.");
-            Console.ReadLine(); 
+            Console.ReadLine();
         }
 
         /// <summary>
