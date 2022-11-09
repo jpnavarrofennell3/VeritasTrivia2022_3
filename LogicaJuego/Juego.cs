@@ -16,6 +16,7 @@ namespace LogicaJuego
         private Random generadorDeNumerosAleatorios;
         private int respuestaDelUsuario;
 
+
         // Método constructor
         public Juego()
         {
@@ -491,6 +492,12 @@ namespace LogicaJuego
             bancoDePreguntas[4].preguntas[3].respuestasDeLaPregunta[2].EnunciadoDeLaRespuesta = "Robert DeNiro";
             bancoDePreguntas[4].preguntas[3].respuestasDeLaPregunta[3].EnunciadoDeLaRespuesta = "J.K. Simmons";
 
+        }
+
+        // Método que retorna la dificultad actual
+        public int ObtenerDificultadActual()
+        {
+            return nivelDeDificultad;
         }
     }
 }

@@ -27,7 +27,6 @@ namespace TriviaVeritas
                     Console.WriteLine("Ha escogido iniciar el juego");
                     Console.ReadLine();
                     IniciarJuego();
-
                 }
                 // si la persona escribio 2
                 else if (seleccionDelUsuario == 2)
@@ -99,13 +98,14 @@ namespace TriviaVeritas
 
             Juego juegoActual = new Juego();
 
+            Console.WriteLine( "Usted esta en nivel {0}", juegoActual.ObtenerDificultadActual());
 
-            Console.WriteLine( "Usted esta en nivel 0");
-
+            // 010
             // Desplegamos la pregunta
             Console.WriteLine( juegoActual.ObtenerPregunta() );
 
-            // Desplegar pusibles respuestas
+            // 010
+            // Desplegar posibles respuestas
             Console.WriteLine(juegoActual.ObtenerRespuestasPosibles(0));
             Console.WriteLine(juegoActual.ObtenerRespuestasPosibles(1));
             Console.WriteLine(juegoActual.ObtenerRespuestasPosibles(2));
@@ -113,21 +113,24 @@ namespace TriviaVeritas
 
             // Capturo la respuesta del jugador
             respuestaDelJugador = CapturarNumero();
+
+            // LLamo al método ResponderPRegunta con el número que escribió el jugador
             juegoActual.ReponderPregunta(respuestaDelJugador);
             
             // Evaluar la respuesta del jugador
             if ( juegoActual.EvaluarRespuesta() == true)
             {
+                // 012
                 // Ejecutar condición de gane
                 Console.WriteLine("¡Correcto, has acertado!");
 
+                // 013
                 // Repetición del problema con mayor dificultad.
                 juegoActual.ProgresarJuego();
-
-                
             }
             else
             {
+                // 011
                 // Ejecutar condición de perdida si el jugador no acerto
                 Console.WriteLine("¡Juego Terminado!");
 
