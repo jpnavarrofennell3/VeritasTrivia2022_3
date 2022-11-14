@@ -1,25 +1,24 @@
-﻿using System;
+﻿using ClasesDeObjectos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ClasesDeObjetos;
 
 namespace LogicaJuego
 {
-    public class Juego
+    public class juego
     {
-        // propiedades ó variables
+        // las variables
         private Dificultad[] bancoDePreguntas;
-        private int nivelDeDificultad;
-        private int numeroDePregunta;
-        private Random generadorDeNumerosAleatorios;
-        private int respuestaDelUsuario;
+        private int niveldedificultad;
+        private int numerodepregunta;
+        private Random generadordenumerosaleatorios;
+        private int respuestadelusuario;
 
-        // Método constructor
-        public Juego()
+        // constructor 
+        public juego()
         {
-            // 004
             bancoDePreguntas = new Dificultad[5];
 
             bancoDePreguntas[0] = new Dificultad();
@@ -213,87 +212,52 @@ namespace LogicaJuego
 
             CargarDatos();
 
-            nivelDeDificultad = 0;
-            // creo el objeto que me da números aleatorios.
-            generadorDeNumerosAleatorios = new Random();
-            // según el manual, me entrega un numero int del 0 al 4 sin incluir el 5.
-            // 021
-            numeroDePregunta = generadorDeNumerosAleatorios.Next(0, 5);
+            niveldedificultad = 0;
+            // creador de aleatoridad
+            generadordenumerosaleatorios = new Random();
+            numerodepregunta = generadordenumerosaleatorios.Next(0, 5);
         }
-
         public void ProgresarJuego()
         {
-            // 013
-            nivelDeDificultad += 1; // nivelDeDificultad = nivelDeDificultad + 1;
-            // 021
-            numeroDePregunta = generadorDeNumerosAleatorios.Next(0, 5);
+            niveldedificultad += 1;
+            numerodepregunta = generadordenumerosaleatorios.Next(0, 5);
         }
-
         public void PerderJuego()
         {
-            // 011
-            nivelDeDificultad = 0;
-
-            // 021
-            numeroDePregunta = generadorDeNumerosAleatorios.Next(0, 5);
+            niveldedificultad = 0;
+            numerodepregunta = generadordenumerosaleatorios.Next(0, 5);
         }
-
-        // Método que me entrega una pregunta del banco de pregunta en la dificultada
-        // actual
+        // entrega de pregunta del banco de preguntas con su dificultad
         public string ObtenerPregunta()
         {
-            return bancoDePreguntas[nivelDeDificultad].preguntas[numeroDePregunta].enunciadoDeLaPregunta;
+            return bancoDePreguntas[niveldedificultad].preguntas[numerodepregunta].enunciadoDeLaPregunta;
         }
-
-        // Método que responde la pregunta actual en la dificultad actual.
-        // Recibe un un valor que guarda en respuestaDelUsuario
-        public void ReponderPregunta(int parametro)
+        public void ResponderPregunta(int parametro)
         {
-
-            respuestaDelUsuario = parametro;
+            respuestadelusuario = parametro;
         }
-
-        // Método que me indica si el jugador acerto o falla la pregunta 
-        // Si acertó, el método devuelve el valor TRUE
-        // Caso contrario, devuelve false.
+        // metodo de fallo o acierto con la respuesta del jugador 
         public bool EvaluarRespuesta()
         {
-            if ( respuestaDelUsuario ==  bancoDePreguntas[nivelDeDificultad].preguntas[numeroDePregunta].respuestaCorrecta )
-                // 012
+            if (respuestadelusuario == bancoDePreguntas[niveldedificultad].preguntas[numerodepregunta].respuestaCorrecta)
                 return true;
             else
-                // 011
                 return false;
-
         }
-
-        // Método que me da la respuesta de la pregunta actual en la dificultad actual
-        //public Respuesta[] ObtenerRespuestasPosibles()
-        //{
-        //    Respuesta[] respuestasPosiblesTemporal = bancoDePreguntas[nivelDeDificultad].preguntas[numeroDePregunta].respuestasDeLaPregunta;
-        //    return respuestasPosiblesTemporal;
-        //}
-
-        public string ObtenerRespuestasPosibles(int indice) // indice es de 0-3
+        public string ObtenerRespuestasPosibles(int indice)
         {
             return
-                bancoDePreguntas[nivelDeDificultad].    // 2
-                    preguntas[numeroDePregunta].        // 0
-                        respuestasDeLaPregunta[indice]. // 3
-                            EnunciadoDeLaRespuesta;     // YuGiOh
+                bancoDePreguntas[niveldedificultad].
+                   preguntas[numerodepregunta].
+                      respuestasDeLaPregunta[indice].
+                        EnunciadoDeLaRespuesta;
         }
-
         public int DarRespuestaCorrecta(int indice)
         {
-            return bancoDePreguntas[nivelDeDificultad].preguntas[numeroDePregunta].respuestaCorrecta;
+            return bancoDePreguntas[niveldedificultad].preguntas[numerodepregunta].respuestaCorrecta;
         }
-
         public void CargarDatos()
         {
-            //Esta funcion funciona como FileExplorer de Windows. 
-            //Por ejemplo: bancoDePreguntas 0/Pregunta 0/enunciadoDeLaPregunta/ 'Pregunta'.
-
-            // Nivel muy fácil
             bancoDePreguntas[0].nombreDeLaDificultad = "Muy Fácil";
 
             bancoDePreguntas[0].preguntas[0].enunciadoDeLaPregunta = "¿Como se llama el anime cuyo personaje principal se llama ash ketchum ?";
@@ -484,3 +448,12 @@ namespace LogicaJuego
             bancoDePreguntas[4].preguntas[4].respuestasDeLaPregunta[1].EnunciadoDeLaRespuesta = "One piece ";
             bancoDePreguntas[4].preguntas[4].respuestasDeLaPregunta[2].EnunciadoDeLaRespuesta = "Hunter x hunter ";
             bancoDePreguntas[4].preguntas[4].respuestasDeLaPregunta[3].EnunciadoDeLaRespuesta = " Jujutsu kaisen";
+        }
+
+        //dificultad actual
+        public int ObtenerDificultadActual()
+        {
+            return niveldedificultad;
+        }
+    }
+}

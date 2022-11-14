@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClasesDeObjetos
+namespace ClasesDeObjectos
 {
     public class Respuesta
     {
@@ -16,3 +16,4 @@ namespace ClasesDeObjetos
         }
     }
 }
+

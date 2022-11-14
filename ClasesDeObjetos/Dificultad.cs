@@ -4,18 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClasesDeObjetos
+namespace ClasesDeObjectos
 {
     public class Dificultad
     {
-         public string nombreDeLaDificultad;
-         public Pregunta[] preguntas;
+        public string nombreDeLaDificultad;
+        public Pregunta[] preguntas;
 
         public Dificultad()
         {
             preguntas = new Pregunta[5];
         }
-        
-
     }
 }

@@ -4,17 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClasesDeObjetos
+namespace ClasesDeObjectos
 {
     public class Pregunta
     {
-        // cadena de texto
+        // cadena
         public string enunciadoDeLaPregunta;
-
-        // arreglo de respuesta
+        //arreglo
         public Respuesta[] respuestasDeLaPregunta;
-
-        // 003
         public int respuestaCorrecta;
 
         public Pregunta()

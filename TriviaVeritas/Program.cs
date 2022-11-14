@@ -1,173 +1,126 @@
 ﻿using LogicaJuego;
 
-namespace TriviaVeritas
+namespace TriviaVeritasAndréRodríguez
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            int seleccionDelUsuario = 0;
+            int SeleccionDelUsuario = 0;
 
-            // Gameloop
-            while(seleccionDelUsuario != 4)
+            //uso de gameloop
+            while (SeleccionDelUsuario != 4)
             {
-                // desplegar la portada del juego
+                // se enseña la portada
                 MostrarPortada();
-
-                //Desplegamos la lista de opciones, cada opcion es numerada
+                // se muestran las opciones en numeradas 
                 MostrarOpciones();
 
-                // se procede a capturar la decisión del usuario
-                // guardo el dato
-                seleccionDelUsuario = CapturarNumero();
+                // se obtiene la decision del usurario y se guarda el dato de este
+                SeleccionDelUsuario = CapturarNumero();
 
-                // si la persona escribio 1
-                if (seleccionDelUsuario == 1)
+                //lo siguiente es lo que se hace cuando el usuario elige el numero 1
+                if (SeleccionDelUsuario == 1)
                 {
-                    Console.WriteLine("Ha escogido iniciar el juego");
+                    Console.WriteLine("_|    _|                                                                            _|        _|                _|            _|            _|                            _|                                          \r\n_|    _|    _|_|_|    _|_|_|        _|_|      _|_|_|    _|_|_|    _|_|      _|_|_|        _|_|_|    _|_|            _|_|_|          _|_|_|        _|_|_|  _|  _|_|            _|    _|    _|_|      _|_|_|    _|_|    \r\n_|_|_|_|  _|    _|  _|_|          _|_|_|_|  _|_|      _|        _|    _|  _|    _|  _|  _|    _|  _|    _|      _|  _|    _|  _|  _|        _|  _|    _|  _|_|            _|  _|    _|  _|_|_|_|  _|    _|  _|    _|  \r\n_|    _|  _|    _|      _|_|      _|            _|_|  _|        _|    _|  _|    _|  _|  _|    _|  _|    _|      _|  _|    _|  _|  _|        _|  _|    _|  _|              _|  _|    _|  _|        _|    _|  _|    _|  \r\n_|    _|    _|_|_|  _|_|_|          _|_|_|  _|_|_|      _|_|_|    _|_|      _|_|_|  _|    _|_|_|    _|_|        _|  _|    _|  _|    _|_|_|  _|    _|_|_|  _|              _|    _|_|_|    _|_|_|    _|_|_|    _|_|    \r\n                                                                                _|                                                                                        _|                            _|            \r\n                                                                            _|_|                                                                                        _|                          _|_|              \r\n");
                     Console.ReadLine();
                     IniciarJuego();
                 }
-                // si la persona escribio 2
-                else if (seleccionDelUsuario == 2)
+                //Si el usuario elige el numero 2 sucede esto
+                else if (SeleccionDelUsuario == 2)
                 {
-                    // desplegar los créditos del juego
-                    MostarInstrucciones();
+                    //muestra las instrucciones
+                    MostrarInstrucciones();
                 }
-
-                // si la persona escribio 3
-                else if (seleccionDelUsuario == 3)
+                // si el usario eligue el numero 3 sucede esto 
+                else if (SeleccionDelUsuario == 3)
                 {
-                    // desplegar los créditos del juego
+                    //Muestra los creditos
                     MostrarCreditos();
                 }
-                // si la persona escribio 4
-                else if (seleccionDelUsuario == 4)
+                // si el usuario elegue 4 sucede  esto
+                else if (SeleccionDelUsuario == 4)
                 {
-                    Console.WriteLine("Ha escogido salir");
+                    Console.WriteLine("#     #                                                                                                      \r\n#     #   ##    ####     ######  ####   ####   ####   ####  # #####   ####      ####    ##   #      # #####  \r\n#     #  #  #  #         #      #      #    # #    # #    # # #    # #    #    #       #  #  #      # #    # \r\n####### #    #  ####     #####   ####  #      #    # #      # #    # #    #     ####  #    # #      # #    # \r\n#     # ######      #    #           # #      #    # #  ### # #    # #    #         # ###### #      # #####  \r\n#     # #    # #    #    #      #    # #    # #    # #    # # #    # #    #    #    # #    # #      # #   #  \r\n#     # #    #  ####     ######  ####   ####   ####   ####  # #####   ####      ####  #    # ###### # #    # ");
                     Console.ReadLine();
                 }
             }
         }
 
-        static public void MostarInstrucciones()
+        static public void MostrarInstrucciones()
         {
-            // Todo juego que desarrollemos debe mostrar
-            // o explicar como se juega
-            Console.WriteLine("Instrucciones del juego");
+            //se muestra como jugar la trivia 
+            Console.WriteLine(" Instruciones de la trivia");
+            Console.WriteLine(" Se le mostrara una pregunta la cual empezara con un minimo nivel de dificultad y se le incrementara el nivel conforme vaya respondiende las preguntas");
+            Console.WriteLine(" La cantidad maxima de preguntas seran 5");
+            Console.WriteLine(" Para responder  las pregruntas, sus respuestas tendran un numero al lado izquierdo de la respuesta digitar ese numero para indicar que esa es la respuesta escogida");
+            Console.WriteLine(" El juego le indicara si perdio o gano");
             Console.ReadLine();
         }
-         
-        /// <summary>
-        /// Esta funcion muestra la portada de trivia
-        /// </summary>
+        //siguiente función muestra la portada de la trivia
         static public void MostrarPortada()
         {
-            // 006
-            // 015
             Console.Clear();
-            Console.WriteLine("__ __|   _)       _)       \r\n   |  __| |\\ \\   / |  _` | \r\n   | |    | \\ \\ /  | (   | \r\n  _|_|   _|  \\_/  _|\\__,_| \r\n                           \r\n\\ \\     /        _) |              \r\n \\ \\   / _ \\  __| | __|  _` |  __| \r\n  \\ \\ /  __/ |    | |   (   |\\__ \\ \r\n   \\_/ \\___|_|   _|\\__|\\__,_|____/ ");
+            Console.WriteLine(" _   _   _   _   _   _     _   _   _   _   _   _   _  \r\n / \\ / \\ / \\ / \\ / \\ / \\   / \\ / \\ / \\ / \\ / \\ / \\ / \\ \r\n( T | r | i | v | i | a ) ( V | e | r | i | t | a | s )\r\n \\_/ \\_/ \\_/ \\_/ \\_/ \\_/   \\_/ \\_/ \\_/ \\_/ \\_/ \\_/ \\_/ ");
         }
-
-        /// <summary>
-        /// Esta función mustra los créditos de la trivia
-        /// </summary>
-
-
+        //siguiente función muestra de los creditos de la trivia
         static public void MostrarCreditos()
         {
-            // 019
-            Console.WriteLine("Creado por Juan Navarro.");
-            Console.WriteLine("Estudiante: André Rodríguez Artavia ");
-            Console.WriteLine("Estudiante: Jose Vargas");
-            Console.WriteLine("Estudiante: Bernardo Hidalgo Castro");
-            Console.WriteLine("Estudiante: Kevin Villalobos Rodríguez");
-            Console.WriteLine("Estudiante: Mario Venegas Venegas(Rama Principal)");
-            Console.WriteLine("Estudiante: Ariana Díaz Luna");
-            Console.WriteLine("Arte ASCII por ascii-art-generator.org.");
-            Console.ReadLine(); 
-
+            Console.WriteLine("Creados por juan Navarro");
+            Console.WriteLine("estudiante: André Rodríguez Artavia");
         }
-
-        /// <summary>
-        /// Función que arranca el juego de Trivia
-        /// </summary>
+        //Funcion que hace iniciar el juego 
         static public void IniciarJuego()
         {
-            int respuestaDelJugador;
-            Juego juegoActual = new Juego();
-            Console.WriteLine( "Usted esta en nivel {0}", juegoActual.ObtenerDificultadActual());
-
-            // Defino una variable que me dice cuantos niveles vamos a jugar como límite
+            int respuestadeljugador;
+            juego juegoActual = new juego();
+            Console.WriteLine("            __           __             __                              __         _            __     ______  _ \r\n  __  _______/ /____  ____/ /  ___  _____/ /_____ _   ___  ____     ___  / /  ____  (_)   _____  / /   _/_/ __ \\| |\r\n / / / / ___/ __/ _ \\/ __  /  / _ \\/ ___/ __/ __ `/  / _ \\/ __ \\   / _ \\/ /  / __ \\/ / | / / _ \\/ /  _/_// / / // /\r\n/ /_/ (__  ) /_/  __/ /_/ /  /  __(__  ) /_/ /_/ /  /  __/ / / /  /  __/ /  / / / / /| |/ /  __/ /  < < / /_/ /_>_>\r\n\\__,_/____/\\__/\\___/\\__,_/   \\___/____/\\__/\\__,_/   \\___/_/ /_/   \\___/_/  /_/ /_/_/ |___/\\___/_/   / / \\____//_/  \r\n                                                                                                    \\_\\     /_/ ", juegoActual.ObtenerDificultadActual());
+            //variable que define cuantos niveles se juegan 
             int limite = 5;
-
-            // necesitamos repetir el proceso de juego hasta el número
-            // que nos diga el límite
-            for (int b =0; b < limite; b++)
+            // en el siguiente se va a repetir el juego hasta llegar al limete 
+            for (int b = 0; b < limite; b++)
             {
-                // 010
-                // Desplegamos la pregunta
+                //s enseña la pregunta
                 Console.WriteLine(juegoActual.ObtenerPregunta());
-
-                // 010
-                // Desplegar posibles respuestas
-                Console.WriteLine("0 - " + juegoActual.ObtenerRespuestasPosibles(0));
-                Console.WriteLine("1 - " + juegoActual.ObtenerRespuestasPosibles(1));
-                Console.WriteLine("2 - " + juegoActual.ObtenerRespuestasPosibles(2));
-                Console.WriteLine("3 - " + juegoActual.ObtenerRespuestasPosibles(3));
-
-                // Capturo la respuesta del jugador
-                respuestaDelJugador = CapturarNumero();
-
-                // LLamo al método ResponderPRegunta con el número que escribió el jugador
-                juegoActual.ReponderPregunta(respuestaDelJugador);
-
-                // Evaluar la respuesta del jugador
+                // se senseñan todas las posibles respuestas
+                Console.WriteLine("0-" + juegoActual.ObtenerRespuestasPosibles(0));
+                Console.WriteLine("1-" + juegoActual.ObtenerRespuestasPosibles(1));
+                Console.WriteLine("2-" + juegoActual.ObtenerRespuestasPosibles(2));
+                Console.WriteLine("3-" + juegoActual.ObtenerRespuestasPosibles(3));
+                //se obtiene la respueta del jugador
+                respuestadeljugador = CapturarNumero();
+                // metodo para responder la pregunta con la respuesta del jugador
+                juegoActual.ResponderPregunta(respuestadeljugador);
+                //en el siguiente se evalua la respuesta 
                 if (juegoActual.EvaluarRespuesta() == true)
                 {
-                    // 012
-                    // Ejecutar condición de gane
-                    Console.WriteLine("¡Correcto, has acertado!");
-
-                    // 013
-                    // Repetición del problema con mayor dificultad.
+                    // cuando se gana
+                    Console.WriteLine("#####                                                                                                                                        ### \r\n#     #  ####  #####  #####  ######  ####  #####  ####         #    #   ##    ####       ##    ####  ###### #####  #####   ##   #####   ####  ### \r\n#       #    # #    # #    # #      #    #   #   #    #        #    #  #  #  #          #  #  #    # #      #    #   #    #  #  #    # #    # ### \r\n#       #    # #    # #    # #####  #        #   #    #        ###### #    #  ####     #    # #      #####  #    #   #   #    # #    # #    #  #  \r\n#       #    # #####  #####  #      #        #   #    # ###    #    # ######      #    ###### #      #      #####    #   ###### #    # #    #     \r\n#     # #    # #   #  #   #  #      #    #   #   #    # ###    #    # #    # #    #    #    # #    # #      #   #    #   #    # #    # #    # ### \r\n #####   ####  #    # #    # ######  ####    #    ####   #     #    # #    #  ####     #    #  ####  ###### #    #   #   #    # #####   ####  ### ");
                     juegoActual.ProgresarJuego();
                 }
                 else
                 {
-                    // 011
-                    // Ejecutar condición de perdida si el jugador no acerto
-                    Console.WriteLine("¡No has acertado!");
-                    Console.WriteLine("¡Juego Terminado!");
-
-                    juegoActual.PerderJuego();
-
+                    //cuando se pierde
+                    Console.WriteLine("#    #   ##    ####     #####  ###### #####  #####  # #####   ####  \r\n#    #  #  #  #         #    # #      #    # #    # # #    # #    # \r\n###### #    #  ####     #    # #####  #    # #    # # #    # #    # \r\n#    # ######      #    #####  #      #####  #    # # #    # #    # \r\n#    # #    # #    #    #      #      #   #  #    # # #    # #    # \r\n#    # #    #  ####     #      ###### #    # #####  # #####   ####  \r\n                                                                    ");
                     Console.ReadLine();
 
-                    // romper el ciclo for
+                    //rompe el ciclo
+
                     break;
+
                 }
                 Console.ReadLine();
             }
-
-            // Como me doy cuenta que el jugador completo todos los niveles?
-            // si el nivel de dificultad llega al valor 5 el jugador superó todo
-            // el juego
-            if ( juegoActual.ObtenerDificultadActual() == 5)
+            // cuadno la dificultad esta al maximo y se supera todo el juego esto pasa
+            if (juegoActual.ObtenerDificultadActual() == 5)
             {
-                // Cominicarle al jugador que ha superado el juego
-                Console.WriteLine("¡Has superado el juego de trivia!");
+                Console.WriteLine("  #     #                                                                                                                                                                                       ### \r\n   #     #   ##    ####      ####  #    # #####  ###### #####    ##   #####   ####     ###### #              # #    # ######  ####   ####     #####  ######    ##### #####  # #    # #   ##      ### \r\n   #     #  #  #  #         #      #    # #    # #      #    #  #  #  #    # #    #    #      #              # #    # #      #    # #    #    #    # #           #   #    # # #    # #  #  #     ### \r\n   ####### #    #  ####      ####  #    # #    # #####  #    # #    # #    # #    #    #####  #              # #    # #####  #      #    #    #    # #####       #   #    # # #    # # #    #     #  \r\n   #     # ######      #         # #    # #####  #      #####  ###### #    # #    #    #      #              # #    # #      #  ### #    #    #    # #           #   #####  # #    # # ######        \r\n   #     # #    # #    #    #    # #    # #      #      #   #  #    # #    # #    #    #      #         #    # #    # #      #    # #    #    #    # #           #   #   #  #  #  #  # #    #    ### \r\n   #     # #    #  ####      ####   ####  #      ###### #    # #    # #####   ####     ###### ######     ####   ####  ######  ####   ####     #####  ######      #   #    # #   ##   # #    #    ### \r\n                                                                                                                                                                                                     \r\n");
                 Console.ReadLine();
             }
         }
-        
-        /// <summary>
-        /// Esta funcion transforma texto en números, si sucede un error regresa un -1
-        /// </summary>
-        /// <returns></returns>
+        //función que transforma texto en numeros si hay un error regresa a -1
         static public int CapturarNumero()
         {
-            // Principio DRY: Dont repeat yourself
             try
             {
                 string textoEscritoPorElUsuario;
@@ -176,24 +129,22 @@ namespace TriviaVeritas
             }
             catch
             {
-                Console.WriteLine("Error al escribir un número!");
-                Console.WriteLine("Solo se aceptan números");
+                Console.WriteLine("Error al escrbir");
+                Console.WriteLine("solo se aceptan numeros del 1 al 4 ");
                 Console.ReadLine();
                 return -1;
             }
         }
-
-        /// <summary>
-        /// Imprime en la pantalla las opciones que el usuario tiene. 
-        /// </summary>
-        static public void MostrarOpciones() 
+        // muestra la pantalla y sus opciones 
+        static public void MostrarOpciones()
         {
-            // 006 - parte de la portada
-            Console.WriteLine("1 - Iniciar Juego");
-            Console.WriteLine("2 - Instrucciones");
-            Console.WriteLine("3 - Creditos");
-            Console.WriteLine("4 - Salir");
-            Console.Write("Digite su seleccion: ");
+            //parte de la pantalla 
+            Console.WriteLine("1- Iniciar Juego");
+            Console.WriteLine("2- Instrciones del juego");
+            Console.WriteLine("3- creditos");
+            Console.WriteLine("4- Salir");
+            Console.WriteLine("Digite su selección: ");
         }
     }
 }
+
