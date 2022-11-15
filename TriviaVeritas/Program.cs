@@ -1,4 +1,5 @@
 ﻿using LogicaJuego;
+using System.Security.Cryptography;
 
 namespace TriviaVeritas
 {
@@ -24,7 +25,7 @@ namespace TriviaVeritas
                 // si la persona escribio 1
                 if (seleccionDelUsuario == 1)
                 {
-                    Console.WriteLine("Ha escogido iniciar el juego");
+                    Console.WriteLine("\nHa escogido iniciar el juego");
                     Console.ReadLine();
                     IniciarJuego();
                 }
@@ -46,7 +47,7 @@ namespace TriviaVeritas
                 // si la persona escribio 4
                 else if (seleccionDelUsuario == 4)
                 {
-                    Console.WriteLine("Ha escogido salir");
+                    Console.WriteLine("\nHa escogido salir");
                     Console.ReadLine();
                 }
             }
@@ -58,7 +59,10 @@ namespace TriviaVeritas
         {
             // Todo juego que desarrollemos debe mostrar
             // o explicar como se juega
-            Console.WriteLine("Instrucciones del juego");
+            Console.WriteLine("\n  _   _   _   _   _   _   _   _   _   _   _   _   _  \r\n / \\ / \\ / \\ / \\ / \\ / \\ / \\ / \\ / \\ / \\ / \\ / \\ / \\ \r\n( I | n | s | t | r | u | c | c | i | o | n | e | s )\r\n \\_/ \\_/ \\_/ \\_/ \\_/ \\_/ \\_/ \\_/ \\_/ \\_/ \\_/ \\_/ \\_/ \r\n\n");
+            Console.WriteLine("Bienvenido, En este juego deberas responder diferentes preguntas, Sobre ciudades y curiosidades de las mismas");
+            Console.WriteLine("Para jugar deberas colocar cuando se te es indicado el numero de la respuesta y presionar *Enter* a la pregunta que considere correcta\nsi a acertado subira a un nivel superior con preguntas mas dificiles. Si fallas debera volver a comenzar desde el principio del juego.");
+
             Console.ReadLine();
         }
          
@@ -70,7 +74,9 @@ namespace TriviaVeritas
             // 006
             // 015
             Console.Clear();
-            Console.WriteLine("__ __|   _)       _)       \r\n   |  __| |\\ \\   / |  _` | \r\n   | |    | \\ \\ /  | (   | \r\n  _|_|   _|  \\_/  _|\\__,_| \r\n                           \r\n\\ \\     /        _) |              \r\n \\ \\   / _ \\  __| | __|  _` |  __| \r\n  \\ \\ /  __/ |    | |   (   |\\__ \\ \r\n   \\_/ \\___|_|   _|\\__|\\__,_|____/ ");
+            Console.WriteLine("\r\n.___________.______      __  ____    ____  __       ___         ____    ____  _______ .______      __  .___________.    ___           _______.\r\n|           |   _  \\    |  | \\   \\  /   / |  |     /   \\        \\   \\  /   / |   ____||   _  \\    |  | |           |   /   \\         /       |\r\n`---|  |----|  |_)  |   |  |  \\   \\/   /  |  |    /  ^  \\        \\   \\/   /  |  |__   |  |_)  |   |  | `---|  |----`  /  ^  \\       |   (----`\r\n    |  |    |      /    |  |   \\      /   |  |   /  /_\\  \\        \\      /   |   __|  |      /    |  |     |  |      /  /_\\  \\       \\   \\    \r\n    |  |    |  |\\  \\----|  |    \\    /    |  |  /  _____  \\        \\    /    |  |____ |  |\\  \\----|  |     |  |     /  _____  \\  .----)   |   \r\n    |__|    | _| `._____|__|     \\__/     |__| /__/     \\__\\        \\__/     |_______|| _| `._____|__|     |__|    /__/     \\__\\ |_______/    \r\n                                                                                                                                              \r\n");
+
+            Console.WriteLine(" \r\n   ___     _              _             _                 \r\n  / __|   (_)   _  _   __| |  __ _   __| |   ___    ___   \r\n | (__    | |  | +| | / _` | / _` | / _` |  / -_)  (_-<   \r\n  \\___|  _|_|_  \\_,_| \\__,_| \\__,_| \\__,_|  \\___|  /__/_  \r\n_|\"\"\"\"\"_|\"\"\"\"\"_|\"\"\"\"\"_|\"\"\"\"\"_|\"\"\"\"\"_|\"\"\"\"\"_|\"\"\"\"\"_|\"\"\"\"\"| \r\n\"`-0-0-\"`-0-0-\"`-0-0-\"`-0-0-\"`-0-0-\"`-0-0-\"`-0-0-\"`-0-0-' \r\n\n");
         }
 
         /// <summary>
@@ -81,14 +87,8 @@ namespace TriviaVeritas
         static public void MostrarCreditos()
         {
             // 019
-            Console.WriteLine("Creado por Juan Navarro.");
-            Console.WriteLine("Estudiante: André Rodríguez Artavia ");
-            Console.WriteLine("Estudiante: Jose Vargas");
-            Console.WriteLine("Estudiante: Bernardo Hidalgo Castro");
-            Console.WriteLine("Estudiante: Kevin Villalobos Rodríguez");
-            Console.WriteLine("Estudiante: Mario Venegas Venegas(Rama Principal)");
-            Console.WriteLine("Estudiante: Ariana Díaz Luna");
-            Console.WriteLine("Arte ASCII por ascii-art-generator.org.");
+            Console.WriteLine("\nEstudiante: Mario Venegas Venegas");
+            Console.WriteLine("Arte: patorjik.com/ Text to Asccii Art generator (TAAG)");
             Console.ReadLine(); 
 
         }
@@ -131,7 +131,7 @@ namespace TriviaVeritas
                 {
                     // 012
                     // Ejecutar condición de gane
-                    Console.WriteLine("¡Correcto, has acertado!");
+                    Console.WriteLine("\n¡Correcto, has acertado!");
 
                     // 013
                     // Repetición del problema con mayor dificultad.
@@ -141,7 +141,7 @@ namespace TriviaVeritas
                 {
                     // 011
                     // Ejecutar condición de perdida si el jugador no acerto
-                    Console.WriteLine("¡No has acertado!");
+                    Console.WriteLine("\n¡No has acertado!");
                     Console.WriteLine("¡Juego Terminado!");
 
                     juegoActual.PerderJuego();
@@ -174,14 +174,14 @@ namespace TriviaVeritas
             // Principio DRY: Dont repeat yourself
             try
             {
-                string textoEscritoPorElUsuario;
+                string textoEscritoPorElUsuario ;
                 textoEscritoPorElUsuario = Console.ReadLine();
                 return int.Parse(textoEscritoPorElUsuario);
             }
             catch
             {
-                Console.WriteLine("Error al escribir un número!");
-                Console.WriteLine("Solo se aceptan números");
+                Console.WriteLine("\n Error al escribir un número!");
+                Console.WriteLine("\n Solo se aceptan números");
                 Console.ReadLine();
                 return -1;
             }
@@ -197,7 +197,7 @@ namespace TriviaVeritas
             Console.WriteLine("2 - Instrucciones");
             Console.WriteLine("3 - Creditos");
             Console.WriteLine("4 - Salir");
-            Console.Write("Digite su seleccion: ");
+            Console.Write("\nDigite su seleccion: ");
         }
     }
 }
