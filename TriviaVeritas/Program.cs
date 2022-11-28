@@ -77,7 +77,7 @@ namespace TriviaVeritas
             Console.WriteLine("6- Si la respuesta es correcta se avanza al siguiente nivel.");
             Console.WriteLine("4- Si la respuesta es incorrecta se devuelve al menu.");
             Console.ReadLine();
-        }
+            }
         //019
         static public void MostrarCreditos()
             {
